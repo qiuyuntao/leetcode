@@ -4,21 +4,30 @@
  * @return {string}
  */
 var convertToTitle = function(n) {
-  while (n < 26) {
-    n = parseInt(n / 26);
+  var s = '';
+  var array = [];
+  while (n >= 1) {
+    var a = Math.floor(n) % 26;
+    n = n / 26;
+    if (a === 0) {
+      array.push('Z');
+      n--;
+      continue;
+    }
+    array.push(String.fromCharCode(a + 64));
   }
-
-  var b = n % 26;
-
-  if (b > 0) {
-    b = 64 + b;
-    s += String.fromCharCode(b);
-  } else {
-    if (a === 1 && b === 0) return 'Z';
-    s += 'Z';
-  }
-
-  return s;
+  return array.reverse().join('');
 };
 
-console.log(convertToTitle(680));
+var n = 701;
+console.log(convertToTitle(n));
+
+/**
+ 1 -> A
+ 2 -> B
+ 3 -> C
+ ...
+ 26 -> Z
+ 27 -> AA
+ 28 -> AB
+ */
