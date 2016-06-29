@@ -16,7 +16,7 @@ var kthSmallest = function(root, k) {
     var array = [];
     array = getSortArray(root, array);
 
-    return array[k];
+    return array[k - 1];
 };
 
 function getSortArray(root, array) {
