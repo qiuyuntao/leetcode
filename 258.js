@@ -1,4 +1,8 @@
-'use strict';
+/**
+ * link: https://leetcode.com/problems/add-digits/
+ * @param {number} num
+ * @return {number}
+ */
 var addDigits = function(num) {
   while (String(num).length !== 1) {
     var arr = getArr(num);
