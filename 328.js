@@ -1,28 +1,25 @@
 /**
  * link: https://leetcode.com/problems/odd-even-linked-list/
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
-/**
  * @param {ListNode} head
  * @return {ListNode}
  */
 var oddEvenList = function(head) {
-  var array_1 = [];
-  var array_2 = [];
+  console.log(head);
+  if (head === null) return head;
+  var oddH = head;
+  var oddTail = oddH;
+  var evenH = head.next;
+  var evenTail = evenH;
+  var node = head.next;
 
-  while (head) {
-    var val = head.val;
-    if (val % 2) {
-      array_1.push(val);
-    } else {
-      array_2.push(val);
-    }
-    head = head.next;
+  while (node && node.next) {
+    oddTail.next = node.next;
+    evenTail.next = node.next.next;
+    oddTail = oddTail.next;
+    evenTail = evenTail.next;
+    node = node.next;
   }
 
-  console.log(array_1.concat(array_2));
+  oddTail.next = evenH;
+  return oddH;
 };
