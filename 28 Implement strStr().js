@@ -16,7 +16,7 @@ var strStr = function(haystack, needle) {
   var array = [];
   for (var i = 0; i < haystack.length; i++) {
     var s = haystack[i];
-    if (s === needle[0]) {
+    if (s === needle[0] && haystack.length - i >= needle.length) {
       array.push(0);
     }
     for (var j = 0; j < array.length; j++) {
