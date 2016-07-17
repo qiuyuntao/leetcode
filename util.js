@@ -39,5 +39,14 @@ const U = {
       }
     }
     return -1;
+  },
+  converBinary(n) {
+    var index = 0;
+    while (n > 0) {
+      if (n % 2 === 1) index++;
+      n = Math.floor(n / 2);
+    }
+
+    return index;
   }
 }
