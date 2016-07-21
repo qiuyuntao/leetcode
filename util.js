@@ -17,6 +17,9 @@ const U = {
 
     return head;
   },
+  getBinaryTree(root) {
+
+  },
   turnIntoArray(head) {
     var array = [];
     while (head) {

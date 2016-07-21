@@ -1,0 +1,23 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiuyuntao/leetcode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qiuyuntao/leetcode/issues"
+  },
+  "homepage": "https://github.com/qiuyuntao/leetcode#readme",
+  "scripts": {
+    "build": "cd gitbook && gitbook build",
+    "publish": "npm run build && node publish.js"
+  }
+}
