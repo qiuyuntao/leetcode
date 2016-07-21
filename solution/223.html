@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>190. Reverse Bits | Leetcode JS Solution (74 / 375)</title>
+        <title>223. Rectangle Area | Leetcode JS Solution (74 / 375)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.2">
@@ -37,10 +37,8 @@
         
     
     
-    <link rel="next" href="../solution/223.html" />
     
-    
-    <link rel="prev" href="../solution/16.html" />
+    <link rel="prev" href="../solution/190.html" />
     
 
         
@@ -49,9 +47,9 @@
         
         
     <div class="book"
-        data-level="2"
-        data-chapter-title="190. Reverse Bits"
-        data-filepath="solution/190.md"
+        data-level="3"
+        data-chapter-title="223. Rectangle Area"
+        data-filepath="solution/223.md"
         data-basepath=".."
         data-revision="Thu Jul 21 2016 20:24:14 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -97,7 +95,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2" data-path="solution/190.html">
+        <li class="chapter " data-level="2" data-path="solution/190.html">
             
                 
                     <a href="../solution/190.html">
@@ -112,7 +110,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3" data-path="solution/223.html">
+        <li class="chapter active" data-level="3" data-path="solution/223.html">
             
                 
                     <a href="../solution/223.html">
@@ -167,40 +165,49 @@
 <li><a href="#&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</a></li>
 </ul>
 <h4 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h4>
-<p>Reverse bits of a given 32 bits unsigned integer.</p>
-<p>For example, given input 43261596 (represented in binary as 00000010100101000001111010011100), return 964176192 (represented in binary as 00111001011110000010100101000000).</p>
-<p>Follow up:
-If this function is called many times, how would you optimize it?</p>
-<p>Related problem: Reverse Integer</p>
+<p>Find the total area covered by two rectilinear rectangles in a 2D plane.</p>
+<p>Each rectangle is defined by its bottom left corner and top right corner as shown in the figure.</p>
+<p><img src="https://leetcode.com/static/images/problemset/rectangle_area.png" alt="https://leetcode.com/static/images/problemset/rectangle_area.png"></p>
+<p>Assume that the total area is never beyond the maximum possible value of int.</p>
 <h4 id="&#x5927;&#x81F4;&#x610F;&#x601D;">&#x5927;&#x81F4;&#x610F;&#x601D;</h4>
-<p>&#x53CD;&#x8F6C;&#x4E00;&#x4E2A;&#x6B63;&#x6574;&#x6570;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x4F4D;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x53CD;&#x8F6C;&#x540E;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;&#x5F97;&#x51FA;&#x76F8;&#x5E94;&#x5341;&#x8FDB;&#x5236;&#x7684;&#x6570;&#x5B57;</p>
-<p>&#x4F8B;&#x5982;</p>
-<p>  43261596 <strong><em>&#x4E8C;&#x8FDB;&#x5236;&#x4E3A;</em></strong> 00000010100101000001111010011100 <strong><em>&#x53CD;&#x8F6C;&#x540E;&#x4E3A;</em></strong> 00111001011110000010100101000000 <strong><em>&#x6839;&#x636E;&#x4E8C;&#x8FDB;&#x5236;&#x8F6C;&#x6362;&#x4E3A;&#x5341;&#x8FDB;&#x5236;</em></strong> 964176192</p>
+<p>&#x5728;x&#x548C;y&#x8F74;&#x4E0A;&#xFF0C;&#x7ED9;&#x51FA;&#x4E24;&#x4E2A;&#x77E9;&#x5F62;&#xFF0C;&#x5206;&#x522B;&#x6709;&#x8FB9;&#x754C;&#x4E0A;&#x7684;&#x56DB;&#x4E2A;&#x70B9;&#xFF0C;&#x6C42;&#x51FA;&#x5728;&#x6574;&#x4E2A;&#x5E73;&#x9762;&#x4E0A;&#xFF0C;&#x4ED6;&#x4EEC;&#x8986;&#x76D6;&#x4E86;&#x591A;&#x5C11;&#x7684;&#x9762;&#x79EF;</p>
 <h4 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</h4>
-<p>&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x548C;&#x4E0A;&#x8FF0;&#x6D41;&#x7A0B;&#x4E00;&#x81F4;</p>
-<p>&#x9996;&#x5148;&#xFF0C;&#x6839;&#x636E;&#x5341;&#x8FDB;&#x5236;&#x5F97;&#x5230;&#x4E8C;&#x8FDB;&#x5236;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> s = <span class="hljs-string">&apos;&apos;</span>; <span class="hljs-comment">// &#x4E8C;&#x8FDB;&#x5236;&#x8868;&#x793A;</span>
-<span class="hljs-keyword">var</span> count = <span class="hljs-number">0</span>;
-<span class="hljs-keyword">var</span> index = <span class="hljs-number">31</span>;
-<span class="hljs-keyword">while</span> (n &gt; <span class="hljs-number">0</span>) {
-  s = (n % <span class="hljs-number">2</span>) + s;
-  index--;
-  n = <span class="hljs-built_in">Math</span>.floor(n / <span class="hljs-number">2</span>);
-}
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x6C42;&#x51FA;&#x4E24;&#x4E2A;&#x77E9;&#x5F62;&#x5404;&#x81EA;&#x7684;&#x9762;&#x79EF;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x76F8;&#x52A0;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> sumArea = (C - A) * (D - B) + (G - E) * (H - F);
 </code></pre>
-<p>&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x662F;&#x8981;&#x7FFB;&#x8F6C;&#xFF0C;&#x5728;&#x5F97;&#x5230;<code>n</code>&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x91C7;&#x7528;&#x7684;&#x662F;<code>s = (n % 2) + s;</code>&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x6211;&#x4EEC;<code>s += (n % 2);</code>&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x76F4;&#x63A5;&#x5F97;&#x5230;&#x4E86;&#x7FFB;&#x8F6C;&#x540E;&#x7684;&#x4E8C;&#x8FDB;&#x5236;</p>
-<p>&#x5E76;&#x4E14;&#x6211;&#x4EEC;&#x6700;&#x540E;&#x662F;&#x8981;&#x8F6C;&#x6362;&#x4E3A;&#x5341;&#x8FDB;&#x5236;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x8FDB;&#x884C;&#x7FFB;&#x8F6C;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5341;&#x8FDB;&#x5236;&#x7684;&#x8BA1;&#x7B97;&#x3002;</p>
+<p>&#x4E24;&#x4E2A;&#x77E9;&#x5F62;&#x5728;&#x5E73;&#x9762;&#x4E0A;&#xFF0C;&#x4ED6;&#x4EEC;&#x53EA;&#x6709;&#x4E24;&#x79CD;&#x53EF;&#x80FD;&#x6027;&#xFF0C;&#x76F8;&#x4EA4;&#x6216;&#x8005;&#x4E0D;&#x76F8;&#x4EA4;&#x3002;</p>
+<ul>
+<li>&#x76F8;&#x4EA4;&#x60C5;&#x51B5;<ul>
+<li>&#x6211;&#x4EEC;&#x6C42;&#x51FA;&#x76F8;&#x4EA4;&#x7684;&#x9876;&#x70B9;&#xFF0C;&#x6C42;&#x51FA;&#x76F8;&#x4EA4;&#x7684;&#x9762;&#x79EF;&#xFF0C;&#x518D;&#x6839;&#x636E;&#x603B;&#x9762;&#x79EF;&#x76F8;&#x51CF;&#xFF0C;&#x5C31;&#x5F97;&#x5230;&#x4E86;&#x8986;&#x76D6;&#x7684;&#x603B;&#x9762;&#x79EF;</li>
+<li>&#x5982;&#x4F55;&#x6C42;&#x51FA;&#x76F8;&#x4EA4;&#x7684;&#x70B9;&#x7684;&#x5750;&#x6807;<ul>
+<li>&#x77E9;&#x5F62;A&#x3001;B&#x5DE6;&#x4E0A;&#x89D2;&#x7684;&#x9876;&#x70B9;&#xFF0C;&#x6C42;&#x51FA;X&#x7684;&#x6700;&#x5C0F;&#xFF0C;&#x53F3;&#x4E0B;&#x89D2;&#x9876;&#x70B9;X&#x7684;&#x6700;&#x5927;</li>
+<li>&#x77E9;&#x5F62;A&#x3001;B&#x5DE6;&#x4E0A;&#x89D2;&#x7684;&#x9876;&#x70B9;&#xFF0C;&#x6C42;&#x51FA;Y&#x7684;&#x6700;&#x5C0F;&#xFF0C;&#x53F3;&#x4E0B;&#x89D2;&#x9876;&#x70B9;Y&#x7684;&#x6700;&#x5927;<pre><code class="lang-js">(<span class="hljs-built_in">Math</span>.min(G, C) - max(A, E)) * (<span class="hljs-built_in">Math</span>.min(D, H) - max(B, F))
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x4E0D;&#x76F8;&#x4EA4;&#x60C5;&#x51B5;<ul>
+<li>&#x56E0;&#x4E3A;&#x4E0D;&#x76F8;&#x52A0;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x8986;&#x76D6;&#x7684;&#x9762;&#x79EF;&#x5C31;&#x662F;&#x4E24;&#x4E2A;&#x77E9;&#x5F62;&#x76F8;&#x52A0;&#x7684;&#x548C;</li>
+<li>&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x4E0D;&#x76F8;&#x4EA4;<ul>
+<li>&#x77E9;&#x5F62;B&#x7684;&#x5DE6;&#x4E0B;&#x89D2;X &gt;= &#x77E9;&#x5F62;A&#x53F3;&#x4E0A;&#x89D2;&#x7684;X</li>
+<li>&#x77E9;&#x5F62;B&#x7684;&#x5DE6;&#x4E0B;&#x89D2;Y &gt;= &#x77E9;&#x5F62;A&#x53F3;&#x4E0A;&#x89D2;&#x7684;Y</li>
+<li>&#x77E9;&#x5F62;A&#x7684;&#x5DE6;&#x4E0B;&#x89D2;X &gt;= &#x77E9;&#x5F62;B&#x53F3;&#x4E0A;&#x89D2;&#x7684;X</li>
+<li>&#x77E9;&#x5F62;A&#x7684;&#x5DE6;&#x4E0B;&#x89D2;Y &gt;= &#x77E9;&#x5F62;B&#x53F3;&#x4E0A;&#x89D2;&#x7684;Y<pre><code class="lang-js"><span class="hljs-keyword">if</span> (E &gt;= C || F &gt;= D || B &gt;= H || A &gt;= G) <span class="hljs-keyword">return</span> sumArea;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h4 id="&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</h4>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> reverseBits = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">n</span>) </span>{
-  <span class="hljs-keyword">var</span> s = <span class="hljs-string">&apos;&apos;</span>;
-  <span class="hljs-keyword">var</span> count = <span class="hljs-number">0</span>;
-  <span class="hljs-keyword">var</span> index = <span class="hljs-number">31</span>;
-  <span class="hljs-keyword">while</span> (n &gt; <span class="hljs-number">0</span>) {
-    <span class="hljs-keyword">if</span> (n % <span class="hljs-number">2</span> !== <span class="hljs-number">0</span>) count += <span class="hljs-built_in">Math</span>.pow(<span class="hljs-number">2</span>, index);
-    index--;
-    n = <span class="hljs-built_in">Math</span>.floor(n / <span class="hljs-number">2</span>);
-  }
-  <span class="hljs-keyword">return</span> count;
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> computeArea = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">A, B, C, D, E, F, G, H</span>) </span>{
+  <span class="hljs-keyword">var</span> sumArea = (C - A) * (D - B) + (G - E) * (H - F);
+
+  <span class="hljs-keyword">if</span> (E &gt;= C || F &gt;= D || B &gt;= H || A &gt;= G) <span class="hljs-keyword">return</span> sumArea;
+  <span class="hljs-keyword">return</span> sumArea - ((<span class="hljs-built_in">Math</span>.min(G, C) - max(A, E)) * (<span class="hljs-built_in">Math</span>.min(D, H) - max(B, F)));
 };
 </code></pre>
 
@@ -213,10 +220,8 @@ If this function is called many times, how would you optimize it?</p>
         </div>
 
         
-        <a href="../solution/16.html" class="navigation navigation-prev " aria-label="Previous page: 16. 3Sum Closest"><i class="fa fa-angle-left"></i></a>
+        <a href="../solution/190.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 190. Reverse Bits"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../solution/223.html" class="navigation navigation-next " aria-label="Next page: 223. Rectangle Area"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
