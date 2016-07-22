@@ -18,6 +18,7 @@
   "homepage": "https://github.com/qiuyuntao/leetcode#readme",
   "scripts": {
     "build": "cd gitbook && gitbook build",
-    "publish": "npm run build && node publish.js"
+    "publish": "npm run build && node publish.js",
+    "start": "cd gitbook && gitbook serve"
   }
 }
