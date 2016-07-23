@@ -19,6 +19,7 @@
   "scripts": {
     "build": "cd gitbook && gitbook build",
     "publish": "npm run build && node publish.js",
-    "start": "cd gitbook && gitbook serve"
+    "start": "cd gitbook && gitbook serve && npm run open",
+    "open": "node open.js"
   }
 }
