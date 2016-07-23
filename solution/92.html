@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>92. Reverse Linked List II | Leetcode JS Solution (74 / 375)</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../solution/190.html" />
+    
+    
+    <link rel="prev" href="../solution/78.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3"
+        data-chapter-title="92. Reverse Linked List II"
+        data-filepath="solution/92.md"
+        data-basepath=".."
+        data-revision="Sat Jul 23 2016 13:01:53 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="solution/16.html">
+            
+                
+                    <a href="../solution/16.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        16. 3Sum Closest
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="solution/78.html">
+            
+                
+                    <a href="../solution/78.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        78. Subsets
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3" data-path="solution/92.html">
+            
+                
+                    <a href="../solution/92.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        92. Reverse Linked List II
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="solution/190.html">
+            
+                
+                    <a href="../solution/190.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        190. Reverse Bits
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="solution/223.html">
+            
+                
+                    <a href="../solution/223.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        223. Rectangle Area
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Leetcode JS Solution (74 / 375)</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <ul>
+<li><a href="#&#x9898;&#x76EE;">&#x9898;&#x76EE;</a></li>
+<li><a href="#&#x5927;&#x81F4;&#x610F;&#x601D;">&#x5927;&#x81F4;&#x610F;&#x601D;</a></li>
+<li><a href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li>
+<li><a href="#&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</a></li>
+</ul>
+<h4 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h4>
+<p>Reverse a linked list from position m to n. Do it in-place and in one-pass.</p>
+<p>For example: Given 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2 and n = 4,</p>
+<p>return 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL.</p>
+<p>Note: Given m, n satisfy the following condition: 1 &#x2264; m &#x2264; n &#x2264; length of list.</p>
+<h4 id="&#x5927;&#x81F4;&#x610F;&#x601D;">&#x5927;&#x81F4;&#x610F;&#x601D;</h4>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x5728;&#x94FE;&#x8868;&#x7684;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x4E2D;&#xFF0C;&#x628A;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x53CD;&#x8F6C;</p>
+<h4 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</h4>
+<ul>
+<li>&#x5982;&#x679C;&#x94FE;&#x8868;&#x4E0D;&#x5B58;&#x5728;&#x3001;&#x6216;&#x8005; <code>m === n</code>&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;<code>return head</code></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (!head || m === n ) <span class="hljs-keyword">return</span> head;
+</code></pre>
+<ul>
+<li>&#x627E;&#x5230;m&#x3001;n&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x4E14;&#x627E;&#x5230;m&#x7684;&#x524D;&#x4E00;&#x4E2A;node&#xFF0C;&#x4EE5;&#x53CA;n&#x7684;&#x4E0B;&#x4E00;&#x4E2A;node&#x3002;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> node = head;
+<span class="hljs-keyword">var</span> index = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">var</span> obj;
+<span class="hljs-keyword">var</span> pre, next, h, t;
+
+<span class="hljs-keyword">while</span> (node) {
+  <span class="hljs-keyword">if</span> (index === m) {
+    h = node; <span class="hljs-comment">// &#x5934;&#x7684;&#x4F4D;&#x7F6E;</span>
+  }
+
+  <span class="hljs-keyword">if</span> (index === n) {
+    t = node; <span class="hljs-comment">// &#x5C3E;&#x7684;&#x4F4D;&#x7F6E;</span>
+    next = node.next; <span class="hljs-comment">// &#x540E;&#x4E00;&#x4E2A;</span>
+
+    obj = reverse(h, t); <span class="hljs-comment">// &#x627E;&#x5230;&#x5934;&#x5C3E;&#xFF0C;&#x8FDB;&#x884C;&#x53CD;&#x8F6C;</span>
+    <span class="hljs-keyword">break</span>;
+  }
+
+  <span class="hljs-keyword">if</span> (!h) pre = node; <span class="hljs-comment">// &#x524D;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;</span>
+  node = node.next;
+  index++;
+}
+</code></pre>
+<ul>
+<li>&#x5C06;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x53CD;&#x8F6C;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">head, tail</span>) </span>{
+  <span class="hljs-keyword">var</span> list = {};
+  tail.next = <span class="hljs-literal">null</span>;
+  <span class="hljs-keyword">var</span> node = head;
+  <span class="hljs-keyword">var</span> pre, next;
+  <span class="hljs-keyword">var</span> h, t;
+
+  <span class="hljs-keyword">while</span> (node) {
+    <span class="hljs-keyword">if</span> (!pre) { <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x662F;&#x6CA1;&#x6709;preNode&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8BB2;&#x8FD9;&#x4E2A;node&#x7684;next&#x8D4B;&#x503C;&#x4E3A;next</span>
+      pre = node;
+      node = node.next;
+      pre.next = <span class="hljs-literal">null</span>;
+      t = pre; <span class="hljs-comment">// &#x5F97;&#x5230;&#x8FD9;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5C3E;&#x90E8;&#xFF0C;&#x65B9;&#x4FBF;&#x540E;&#x7EED;&#x63D2;&#x5165;</span>
+      <span class="hljs-keyword">continue</span>;
+    }
+
+    <span class="hljs-comment">// &#x5C06;&#x73B0;&#x5728;&#x7684;node&#x6307;&#x5411;&#x5B58;&#x8D77;&#x6765;&#x7684;pre</span>
+    next = node.next;
+    node.next = pre;
+    pre = node;
+    node = next;
+  }
+  <span class="hljs-keyword">return</span> { <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x6574;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x4EE5;&#x53CA;&#x5C3E;&#x90E8;</span>
+    node: pre,
+    tail: t
+  };
+}
+</code></pre>
+<ul>
+<li>&#x6839;&#x636E;&#x524D;&#x540E;&#x5185;&#x5BB9;&#xFF0C;&#x8FDB;&#x884C;&#x62FC;&#x63A5;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (!pre) {
+  head = obj.node;
+} <span class="hljs-keyword">else</span> {
+  pre.next = obj.node;
+}
+obj.tail.next = next;
+
+<span class="hljs-keyword">return</span> head;
+</code></pre>
+<h4 id="&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> reverseBetween = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">head, m, n</span>) </span>{
+  <span class="hljs-keyword">if</span> (!head || m === n ) <span class="hljs-keyword">return</span> head;
+
+  <span class="hljs-keyword">var</span> node = head;
+  <span class="hljs-keyword">var</span> index = <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">var</span> obj;
+  <span class="hljs-keyword">var</span> pre, next, h, t;
+
+  <span class="hljs-keyword">while</span> (node) {
+    <span class="hljs-keyword">if</span> (index === m) {
+      h = node;
+    }
+
+    <span class="hljs-keyword">if</span> (index === n) {
+      t = node;
+      next = node.next;
+
+      obj = reverse(h, t);
+      <span class="hljs-keyword">break</span>;
+    }
+
+    <span class="hljs-keyword">if</span> (!h) pre = node;
+    node = node.next;
+    index++;
+  }
+
+  <span class="hljs-keyword">if</span> (!pre) {
+    head = obj.node;
+  } <span class="hljs-keyword">else</span> {
+    pre.next = obj.node;
+  }
+  obj.tail.next = next;
+
+  <span class="hljs-keyword">return</span> head;
+};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">head, tail</span>) </span>{
+  <span class="hljs-keyword">var</span> list = {};
+  tail.next = <span class="hljs-literal">null</span>;
+  <span class="hljs-keyword">var</span> node = head;
+  <span class="hljs-keyword">var</span> pre, next;
+  <span class="hljs-keyword">var</span> h, t;
+  <span class="hljs-keyword">var</span> flag = <span class="hljs-literal">true</span>;
+
+  <span class="hljs-keyword">while</span> (node) {
+    <span class="hljs-keyword">if</span> (!pre) {
+      pre = node;
+      node = node.next;
+      pre.next = <span class="hljs-literal">null</span>;
+      t = pre;
+      <span class="hljs-keyword">continue</span>;
+    }
+
+    next = node.next;
+    node.next = pre;
+    pre = node;
+    node = next;
+  }
+  <span class="hljs-keyword">return</span> {
+    node: pre,
+    tail: t
+  };
+}
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../solution/78.html" class="navigation navigation-prev " aria-label="Previous page: 78. Subsets"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../solution/190.html" class="navigation navigation-next " aria-label="Next page: 190. Reverse Bits"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
