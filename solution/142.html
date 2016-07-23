@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>92. Reverse Linked List II | Leetcode JS Solution (74 / 375)</title>
+        <title>142. Linked List Cycle II | Leetcode JS Solution (74 / 375)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../solution/141.html" />
+    <link rel="next" href="../solution/160.html" />
     
     
-    <link rel="prev" href="../solution/88.html" />
+    <link rel="prev" href="../solution/141.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="4"
-        data-chapter-title="92. Reverse Linked List II"
-        data-filepath="solution/92.md"
+        data-level="6"
+        data-chapter-title="142. Linked List Cycle II"
+        data-filepath="solution/142.md"
         data-basepath=".."
         data-revision="Sat Jul 23 2016 16:33:12 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -127,7 +127,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4" data-path="solution/92.html">
+        <li class="chapter " data-level="4" data-path="solution/92.html">
             
                 
                     <a href="../solution/92.html">
@@ -157,7 +157,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6" data-path="solution/142.html">
+        <li class="chapter active" data-level="6" data-path="solution/142.html">
             
                 
                     <a href="../solution/142.html">
@@ -257,151 +257,54 @@
 <li><a href="#&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</a></li>
 </ul>
 <h4 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h4>
-<p>Reverse a linked list from position m to n. Do it in-place and in one-pass.</p>
-<p>For example: Given 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2 and n = 4,</p>
-<p>return 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL.</p>
-<p>Note: Given m, n satisfy the following condition: 1 &#x2264; m &#x2264; n &#x2264; length of list.</p>
+<p>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.</p>
+<p>Note: Do not modify the linked list.</p>
 <h4 id="&#x5927;&#x81F4;&#x610F;&#x601D;">&#x5927;&#x81F4;&#x610F;&#x601D;</h4>
-<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x5728;&#x94FE;&#x8868;&#x7684;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x4E2D;&#xFF0C;&#x628A;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x53CD;&#x8F6C;</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x91CC;&#x9762;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5706;&#x73AF;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x73AF;&#x7684;&#x8BDD;&#xFF0C;&#x5224;&#x65AD;&#x4E00;&#x4E0B;&#x73AF;&#x7684;&#x8D77;&#x70B9;&#x662F;&#x4EC0;&#x4E48;</p>
 <h4 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</h4>
 <ul>
-<li>&#x5982;&#x679C;&#x94FE;&#x8868;&#x4E0D;&#x5B58;&#x5728;&#x3001;&#x6216;&#x8005; <code>m === n</code>&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;<code>return head</code></li>
+<li>&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x73AF;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="141.html">141&#x9898;</a></li>
 </ul>
-<pre><code class="lang-js"><span class="hljs-keyword">if</span> (!head || m === n ) <span class="hljs-keyword">return</span> head;
-</code></pre>
-<ul>
-<li>&#x627E;&#x5230;m&#x3001;n&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x4E14;&#x627E;&#x5230;m&#x7684;&#x524D;&#x4E00;&#x4E2A;node&#xFF0C;&#x4EE5;&#x53CA;n&#x7684;&#x4E0B;&#x4E00;&#x4E2A;node&#x3002;</li>
-</ul>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> node = head;
-<span class="hljs-keyword">var</span> index = <span class="hljs-number">1</span>;
-<span class="hljs-keyword">var</span> obj;
-<span class="hljs-keyword">var</span> pre, next, h, t;
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> hasCycle = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">head</span>) </span>{
+  head = U.getList(head);
+  <span class="hljs-keyword">var</span> slow = head;
+  <span class="hljs-keyword">var</span> fast = head;
 
-<span class="hljs-keyword">while</span> (node) {
-  <span class="hljs-keyword">if</span> (index === m) {
-    h = node; <span class="hljs-comment">// &#x5934;&#x7684;&#x4F4D;&#x7F6E;</span>
-  }
-
-  <span class="hljs-keyword">if</span> (index === n) {
-    t = node; <span class="hljs-comment">// &#x5C3E;&#x7684;&#x4F4D;&#x7F6E;</span>
-    next = node.next; <span class="hljs-comment">// &#x540E;&#x4E00;&#x4E2A;</span>
-
-    obj = reverse(h, t); <span class="hljs-comment">// &#x627E;&#x5230;&#x5934;&#x5C3E;&#xFF0C;&#x8FDB;&#x884C;&#x53CD;&#x8F6C;</span>
-    <span class="hljs-keyword">break</span>;
-  }
-
-  <span class="hljs-keyword">if</span> (!h) pre = node; <span class="hljs-comment">// &#x524D;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;</span>
-  node = node.next;
-  index++;
-}
-</code></pre>
-<ul>
-<li>&#x5C06;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x53CD;&#x8F6C;</li>
-</ul>
-<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">head, tail</span>) </span>{
-  <span class="hljs-keyword">var</span> list = {};
-  tail.next = <span class="hljs-literal">null</span>;
-  <span class="hljs-keyword">var</span> node = head;
-  <span class="hljs-keyword">var</span> pre, next;
-  <span class="hljs-keyword">var</span> h, t;
-
-  <span class="hljs-keyword">while</span> (node) {
-    <span class="hljs-keyword">if</span> (!pre) { <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x662F;&#x6CA1;&#x6709;preNode&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8BB2;&#x8FD9;&#x4E2A;node&#x7684;next&#x8D4B;&#x503C;&#x4E3A;next</span>
-      pre = node;
-      node = node.next;
-      pre.next = <span class="hljs-literal">null</span>;
-      t = pre; <span class="hljs-comment">// &#x5F97;&#x5230;&#x8FD9;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5C3E;&#x90E8;&#xFF0C;&#x65B9;&#x4FBF;&#x540E;&#x7EED;&#x63D2;&#x5165;</span>
-      <span class="hljs-keyword">continue</span>;
+  <span class="hljs-keyword">while</span> (fast &amp;&amp; fast.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+    <span class="hljs-keyword">if</span> (slow === fast) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
     }
-
-    <span class="hljs-comment">// &#x5C06;&#x73B0;&#x5728;&#x7684;node&#x6307;&#x5411;&#x5B58;&#x8D77;&#x6765;&#x7684;pre</span>
-    next = node.next;
-    node.next = pre;
-    pre = node;
-    node = next;
-  }
-  <span class="hljs-keyword">return</span> { <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x6574;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x4EE5;&#x53CA;&#x5C3E;&#x90E8;</span>
-    node: pre,
-    tail: t
-  };
-}
-</code></pre>
-<ul>
-<li>&#x6839;&#x636E;&#x524D;&#x540E;&#x5185;&#x5BB9;&#xFF0C;&#x8FDB;&#x884C;&#x62FC;&#x63A5;</li>
-</ul>
-<pre><code class="lang-js"><span class="hljs-keyword">if</span> (!pre) {
-  head = obj.node;
-} <span class="hljs-keyword">else</span> {
-  pre.next = obj.node;
-}
-obj.tail.next = next;
-
-<span class="hljs-keyword">return</span> head;
-</code></pre>
-<h4 id="&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</h4>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> reverseBetween = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">head, m, n</span>) </span>{
-  <span class="hljs-keyword">if</span> (!head || m === n ) <span class="hljs-keyword">return</span> head;
-
-  <span class="hljs-keyword">var</span> node = head;
-  <span class="hljs-keyword">var</span> index = <span class="hljs-number">1</span>;
-  <span class="hljs-keyword">var</span> obj;
-  <span class="hljs-keyword">var</span> pre, next, h, t;
-
-  <span class="hljs-keyword">while</span> (node) {
-    <span class="hljs-keyword">if</span> (index === m) {
-      h = node;
-    }
-
-    <span class="hljs-keyword">if</span> (index === n) {
-      t = node;
-      next = node.next;
-
-      obj = reverse(h, t);
-      <span class="hljs-keyword">break</span>;
-    }
-
-    <span class="hljs-keyword">if</span> (!h) pre = node;
-    node = node.next;
-    index++;
   }
 
-  <span class="hljs-keyword">if</span> (!pre) {
-    head = obj.node;
-  } <span class="hljs-keyword">else</span> {
-    pre.next = obj.node;
-  }
-  obj.tail.next = next;
-
-  <span class="hljs-keyword">return</span> head;
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
 };
+</code></pre>
+<ul>
+<li>&#x5982;&#x4F55;&#x5224;&#x65AD;&#x662F;&#x5426;&#x73AF;&#x7684;&#x8D77;&#x70B9;&#x5728;&#x54EA;&#x91CC;<ul>
+<li>&#x7531;&#x56FE;&#x53EF;&#x4EE5;&#x5F97;&#x5230;,&#x7B2C;&#x4E00;&#x6B21;&#x76F8;&#x9047;&#x65F6;slow&#x8D70;&#x8FC7;&#x7684;&#x8DDD;&#x79BB;&#xFF1A;a+b&#xFF0C;fast&#x8D70;&#x8FC7;&#x7684;&#x8DDD;&#x79BB;&#xFF1A;a+b+c+b&#x3002;&#x56E0;&#x4E3A;fast&#x7684;&#x901F;&#x5EA6;&#x662F;slow&#x7684;&#x4E24;&#x500D;&#xFF0C;&#x6240;&#x4EE5;fast&#x8D70;&#x7684;&#x8DDD;&#x79BB;&#x662F;slow&#x7684;&#x4E24;&#x500D;&#xFF0C;&#x6709; 2(a+b) = a+b+c+b&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x5230;a=c&#xFF08;&#x8FD9;&#x4E2A;&#x7ED3;&#x8BBA;&#x5F88;&#x91CD;&#x8981;&#xFF01;&#xFF09;&#x3002;</li>
+<li>&#x4EEC;&#x5DF2;&#x7ECF;&#x5F97;&#x5230;&#x4E86;&#x7ED3;&#x8BBA;a=c&#xFF0C;&#x90A3;&#x4E48;&#x8BA9;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x5206;&#x522B;&#x4ECE;X&#x548C;Z&#x5F00;&#x59CB;&#x8D70;&#xFF0C;&#x6BCF;&#x6B21;&#x8D70;&#x4E00;&#x6B65;&#xFF0C;&#x90A3;&#x4E48;&#x6B63;&#x597D;&#x4F1A;&#x5728;Y&#x76F8;&#x9047;&#xFF01;&#x4E5F;&#x5C31;&#x662F;&#x73AF;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://images.cnitblog.com/blog/354747/201311/05171805-64db9f059a1641e7afaf3dd8223c4fe7.jpg" alt="http://images.cnitblog.com/blog/354747/201311/05171805-64db9f059a1641e7afaf3dd8223c4fe7.jpg"></p>
+<h4 id="&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> hasCycle = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">head</span>) </span>{
+  head = U.getList(head);
+  <span class="hljs-keyword">var</span> slow = head;
+  <span class="hljs-keyword">var</span> fast = head;
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reverse</span>(<span class="hljs-params">head, tail</span>) </span>{
-  <span class="hljs-keyword">var</span> list = {};
-  tail.next = <span class="hljs-literal">null</span>;
-  <span class="hljs-keyword">var</span> node = head;
-  <span class="hljs-keyword">var</span> pre, next;
-  <span class="hljs-keyword">var</span> h, t;
-  <span class="hljs-keyword">var</span> flag = <span class="hljs-literal">true</span>;
-
-  <span class="hljs-keyword">while</span> (node) {
-    <span class="hljs-keyword">if</span> (!pre) {
-      pre = node;
-      node = node.next;
-      pre.next = <span class="hljs-literal">null</span>;
-      t = pre;
-      <span class="hljs-keyword">continue</span>;
+  <span class="hljs-keyword">while</span> (fast &amp;&amp; fast.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+    <span class="hljs-keyword">if</span> (slow === fast) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
     }
-
-    next = node.next;
-    node.next = pre;
-    pre = node;
-    node = next;
   }
-  <span class="hljs-keyword">return</span> {
-    node: pre,
-    tail: t
-  };
-}
+
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+};
 </code></pre>
 
                     
@@ -413,10 +316,10 @@ obj.tail.next = next;
         </div>
 
         
-        <a href="../solution/88.html" class="navigation navigation-prev " aria-label="Previous page: 88. Merge Sorted Array"><i class="fa fa-angle-left"></i></a>
+        <a href="../solution/141.html" class="navigation navigation-prev " aria-label="Previous page: 141. Linked List Cycle"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../solution/141.html" class="navigation navigation-next " aria-label="Next page: 141. Linked List Cycle"><i class="fa fa-angle-right"></i></a>
+        <a href="../solution/160.html" class="navigation navigation-next " aria-label="Next page: 160. Intersection of Two Linked Lists"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
