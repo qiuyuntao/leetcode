@@ -1,1 +1,2 @@
-# Leetcode JS Solution (74 / 375)
+Leetcode JS Solution (84 / 376)
+===============================
