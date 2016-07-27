@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>16. 3Sum Closest | Leetcode JS Solution (84 / 376)</title>
+        <title>203. Remove Linked List Elements | Leetcode JS Solution (84 / 376)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../solution/78.html" />
+    <link rel="next" href="../solution/223.html" />
     
     
-    <link rel="prev" href="../index.html" />
+    <link rel="prev" href="../solution/190.html" />
     
 
         
@@ -49,11 +49,11 @@
         
         
     <div class="book"
-        data-level="1"
-        data-chapter-title="16. 3Sum Closest"
-        data-filepath="solution/16.md"
+        data-level="8"
+        data-chapter-title="203. Remove Linked List Elements"
+        data-filepath="solution/203.md"
         data-basepath=".."
-        data-revision="Mon Jul 25 2016 19:20:54 GMT+0800 (CST)"
+        data-revision="Wed Jul 27 2016 12:52:40 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -82,29 +82,14 @@
             
         </li>
     
-        <li class="chapter active" data-level="1" data-path="solution/16.html">
-            
-                
-                    <a href="../solution/16.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.</b>
-                        
-                        16. 3Sum Closest
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2" data-path="solution/78.html">
+        <li class="chapter " data-level="1" data-path="solution/78.html">
             
                 
                     <a href="../solution/78.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.</b>
+                            <b>1.</b>
                         
                         78. Subsets
                     </a>
@@ -112,14 +97,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3" data-path="solution/88.html">
+        <li class="chapter " data-level="2" data-path="solution/88.html">
             
                 
                     <a href="../solution/88.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.</b>
+                            <b>2.</b>
                         
                         88. Merge Sorted Array
                     </a>
@@ -127,14 +112,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4" data-path="solution/92.html">
+        <li class="chapter " data-level="3" data-path="solution/92.html">
             
                 
                     <a href="../solution/92.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.</b>
+                            <b>3.</b>
                         
                         92. Reverse Linked List II
                     </a>
@@ -142,14 +127,14 @@
             
         </li>
     
-        <li class="chapter " data-level="5" data-path="solution/141.html">
+        <li class="chapter " data-level="4" data-path="solution/141.html">
             
                 
                     <a href="../solution/141.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.</b>
+                            <b>4.</b>
                         
                         141. Linked List Cycle
                     </a>
@@ -157,14 +142,14 @@
             
         </li>
     
-        <li class="chapter " data-level="6" data-path="solution/142.html">
+        <li class="chapter " data-level="5" data-path="solution/142.html">
             
                 
                     <a href="../solution/142.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>6.</b>
+                            <b>5.</b>
                         
                         142. Linked List Cycle II
                     </a>
@@ -172,14 +157,14 @@
             
         </li>
     
-        <li class="chapter " data-level="7" data-path="solution/160.html">
+        <li class="chapter " data-level="6" data-path="solution/160.html">
             
                 
                     <a href="../solution/160.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>7.</b>
+                            <b>6.</b>
                         
                         160. Intersection of Two Linked Lists
                     </a>
@@ -187,16 +172,31 @@
             
         </li>
     
-        <li class="chapter " data-level="8" data-path="solution/190.html">
+        <li class="chapter " data-level="7" data-path="solution/190.html">
             
                 
                     <a href="../solution/190.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>8.</b>
+                            <b>7.</b>
                         
                         190. Reverse Bits
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="8" data-path="solution/203.html">
+            
+                
+                    <a href="../solution/203.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        203. Remove Linked List Elements
                     </a>
             
             
@@ -265,7 +265,54 @@
                 
                     <section class="normal" id="section-">
                     
-                        
+                        <ul>
+<li><a href="#&#x9898;&#x76EE;">&#x9898;&#x76EE;</a></li>
+<li><a href="#&#x5927;&#x81F4;&#x610F;&#x601D;">&#x5927;&#x81F4;&#x610F;&#x601D;</a></li>
+<li><a href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</a></li>
+<li><a href="#&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</a></li>
+</ul>
+<h4 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h4>
+<p>Remove all elements from a linked list of integers that have value val.</p>
+<pre><code class="lang-js">Example
+Given: <span class="hljs-number">1</span> --&gt; <span class="hljs-number">2</span> --&gt; <span class="hljs-number">6</span> --&gt; <span class="hljs-number">3</span> --&gt; <span class="hljs-number">4</span> --&gt; <span class="hljs-number">5</span> --&gt; <span class="hljs-number">6</span>, val = <span class="hljs-number">6</span>
+Return: <span class="hljs-number">1</span> --&gt; <span class="hljs-number">2</span> --&gt; <span class="hljs-number">3</span> --&gt; <span class="hljs-number">4</span> --&gt; <span class="hljs-number">5</span>
+</code></pre>
+<h4 id="&#x5927;&#x81F4;&#x610F;&#x601D;">&#x5927;&#x81F4;&#x610F;&#x601D;</h4>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x548C;&#x4E00;&#x4E2A;val&#xFF0C;&#x628A;&#x8FD9;&#x4E2A;&#x94FE;&#x8868;&#x4E2D;&#x4E0E;&#x7ED9;&#x5B9A;val&#x76F8;&#x540C;&#x7684;&#x8282;&#x70B9;&#x5E72;&#x6389;</p>
+<h4 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</h4>
+<ul>
+<li>&#x9996;&#x5148;&#xFF0C;&#x9700;&#x8981;&#x904D;&#x5386;&#x6574;&#x4E2A;&#x94FE;&#x8868;</li>
+<li>&#x5728;&#x6BCF;&#x6B21;&#x904D;&#x5386;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x8BB0;&#x5F55;&#x4E0A;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x5728;&#x627E;&#x5230;&#x9700;&#x8981;&#x5E72;&#x6389;&#x7684;&#x8282;&#x70B9;&#x65F6;&#x5019;&#xFF0C;&#x8FDB;&#x884C;&#x4E0A;&#x4E0B;&#x7684;&#x62FC;&#x63A5;<ul>
+<li>&#x5F53;&#x51FA;&#x73B0;&#x94FE;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5C31;&#x662F;&#x9700;&#x8981;&#x88AB;&#x5E72;&#x6389;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x76F4;&#x63A5;&#x8FDB;&#x884C;<code>head = head.next</code>&#x7684;&#x64CD;&#x4F5C;</li>
+<li>&#x5F53;<code>node.val === val</code>&#x7684;&#x65F6;&#x5019;&#xFF0C;<code>pre.next = node.next</code>,&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x4E0D;&#x8981;&#x53BB;&#x6539;&#x53D8;<code>pre</code>&#xFF0C;&#x56E0;&#x4E3A;&#x4E0B;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x53EF;&#x80FD;&#x4E5F;&#x662F;&#x9700;&#x8981;&#x88AB;&#x5E72;&#x6389;&#x7684;&#x8282;&#x70B9;</li>
+<li>&#x5982;&#x679C;&#x4E0D;&#x9700;&#x8981;&#x5E72;&#x6389;&#xFF0C;<code>pre = node</code>&#xFF0C;&#x7136;&#x540E;node&#x7EE7;&#x7EED;&#x904D;&#x5386; <code>node = node.next</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> removeElements = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">head, val</span>) </span>{
+  <span class="hljs-keyword">if</span> (!head) <span class="hljs-keyword">return</span> head;
+
+  <span class="hljs-keyword">var</span> node = head;
+  <span class="hljs-keyword">var</span> pre;
+
+  <span class="hljs-keyword">while</span> (node) {
+    <span class="hljs-keyword">if</span> (node.val === val) {
+      <span class="hljs-keyword">if</span> (!pre) {
+        head = head.next;
+      } <span class="hljs-keyword">else</span> {
+        pre.next = node.next;
+      }
+    } <span class="hljs-keyword">else</span> {
+      pre = node;
+    }
+    node = node.next;
+  }
+
+  <span class="hljs-keyword">return</span> head;
+};
+</code></pre>
+
                     
                     </section>
                 
@@ -275,10 +322,10 @@
         </div>
 
         
-        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
+        <a href="../solution/190.html" class="navigation navigation-prev " aria-label="Previous page: 190. Reverse Bits"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../solution/78.html" class="navigation navigation-next " aria-label="Next page: 78. Subsets"><i class="fa fa-angle-right"></i></a>
+        <a href="../solution/223.html" class="navigation navigation-next " aria-label="Next page: 223. Rectangle Area"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
