@@ -4,6 +4,7 @@ Summary
 -	[78. Subsets](solution/78.md)
 -	[88. Merge Sorted Array](solution/88.md)
 -	[92. Reverse Linked List II](solution/92.md)
+-	[125. Valid Palindrome](solution/125.md)
 -	[141. Linked List Cycle](solution/141.md)
 -	[142. Linked List Cycle II](solution/142.md)
 -	[160. Intersection of Two Linked Lists](solution/160.md)
@@ -11,3 +12,4 @@ Summary
 -	[203. Remove Linked List Elements](solution/203.md)
 -	[223. Rectangle Area](solution/223.md)
 -	[227. Basic Calculator II](solution/227.md)
+-	[263. Ugly Number](solution/263.md)
