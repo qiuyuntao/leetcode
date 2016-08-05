@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>78. Subsets | Leetcode JS Solution (84 / 376)</title>
+        <title>263. Ugly Number | Leetcode JS Solution (84 / 376)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.2">
@@ -37,10 +37,8 @@
         
     
     
-    <link rel="next" href="../solution/88.html" />
     
-    
-    <link rel="prev" href="../index.html" />
+    <link rel="prev" href="../solution/227.html" />
     
 
         
@@ -49,9 +47,9 @@
         
         
     <div class="book"
-        data-level="1"
-        data-chapter-title="78. Subsets"
-        data-filepath="solution/78.md"
+        data-level="12"
+        data-chapter-title="263. Ugly Number"
+        data-filepath="solution/263.md"
         data-basepath=".."
         data-revision="Sat Aug 06 2016 01:58:01 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -82,7 +80,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1" data-path="solution/78.html">
+        <li class="chapter " data-level="1" data-path="solution/78.html">
             
                 
                     <a href="../solution/78.html">
@@ -247,7 +245,7 @@
             
         </li>
     
-        <li class="chapter " data-level="12" data-path="solution/263.html">
+        <li class="chapter active" data-level="12" data-path="solution/263.html">
             
                 
                     <a href="../solution/263.html">
@@ -302,73 +300,43 @@
 <li><a href="#&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</a></li>
 </ul>
 <h4 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h4>
-<p>Given a set of distinct integers, nums, return all possible subsets.</p>
-<p>Note: The solution set must not contain duplicate subsets.</p>
-<p>For example, If nums = [1,2,3], a solution is:</p>
-<pre><code class="lang-js">[
-  [<span class="hljs-number">3</span>],
-  [<span class="hljs-number">1</span>],
-  [<span class="hljs-number">2</span>],
-  [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],
-  [<span class="hljs-number">1</span>,<span class="hljs-number">3</span>],
-  [<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],
-  [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],
-  []
-]
-</code></pre>
+<p>Write a program to check whether a given number is an ugly number.</p>
+<p>Ugly numbers are positive numbers whose prime factors only include 2, 3, 5. For example, 6, 8 are ugly while 14 is not ugly since it includes another prime factor 7.</p>
+<p>Note that 1 is typically treated as an ugly number.</p>
 <h4 id="&#x5927;&#x81F4;&#x610F;&#x601D;">&#x5927;&#x81F4;&#x610F;&#x601D;</h4>
-<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x628A;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x62C6;&#x5206;&#xFF0C;&#x7ED9;&#x51FA;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x53EF;&#x80FD;&#x6027;&#xFF0C;&#x5E76;&#x4E14;&#x5217;&#x51FA;&#x6765;&#x3002;</p>
+<p>&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x662F;&#x5426;&#x4E3A;ugly&#x6570;&#x5B57;&#x3002;&#x8981;&#x662F;&#x5B83;&#x53EA;&#x80FD;&#x88AB;2&#x3001;3&#x3001;5&#x8FD9;&#x4E09;&#x4E2A;&#x6570;&#x5B57;&#x9664;&#x5C3D;&#x7684;&#x8BDD;&#xFF0C;&#x4ED6;&#x5C31;&#x662F;&#x3002;&#x6BD4;&#x5982; <code>6 = 2 * 3</code>, <code>8 = 2 * 2 * 2</code>&#x3002;&#x6240;&#x4EE5;6&#x548C;8&#x662F;&#x3002;&#x4F46;&#x662F;<code>14 = 2 * 7</code>&#xFF0C;&#x6240;&#x4EE5;14&#x4E0D;&#x662F;</p>
 <h4 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</h4>
-<p>&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#xFF0C;&#x9996;&#x5148;&#x60F3;&#x5230;&#x7684;&#x5C31;&#x662F;&#x5229;&#x7528;&#x9012;&#x5F52;&#x53BB;&#x89E3;&#x51B3;&#x3002;</p>
 <ul>
-<li>&#x9996;&#x5148;&#xFF0C;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5C06;&#x7A7A;&#x6570;&#x7EC4;&#x653E;&#x8FDB;&#x53BB;</li>
+<li>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6328;&#x4E2A;&#x8FDB;&#x884C;<code>2 3 5</code>&#x8FDB;&#x884C;&#x9664;&#xFF0C;&#x5224;&#x65AD;&#x6700;&#x540E;&#x662F;&#x5426;&#x4E3A;1</li>
 </ul>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> array = [[]];
-</code></pre>
-<ul>
-<li>&#x7136;&#x540E;&#x8C03;&#x7528;<code>combine</code>&#x51FD;&#x6570;</li>
-</ul>
-<pre><code class="lang-js">combine([], nums.slice(<span class="hljs-number">0</span>), array);
-</code></pre>
-<ul>
-<li>&#x5728;<code>combine</code>&#x51FD;&#x6570;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5269;&#x4E0B;&#x7684;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x904D;&#x5386;</li>
-</ul>
-<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">combine</span>(<span class="hljs-params">arr, nums, array</span>) </span>{
-  <span class="hljs-keyword">while</span> (nums.length) {
-    <span class="hljs-keyword">var</span> data = nums[<span class="hljs-number">0</span>];
-    <span class="hljs-keyword">var</span> arr_1 = arr.slice(<span class="hljs-number">0</span>);
-    arr_1.push(data);
-    array.push(arr_1);
-    nums.shift();
-    combine(arr_1, nums.slice(<span class="hljs-number">0</span>), array);
-  }
-}
-</code></pre>
-<ul>
-<li>&#x5728;<code>combine</code>&#x51FD;&#x6570;&#x91CC;&#xFF0C;<code>arr</code>&#x91CC;&#x8868;&#x793A;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x6DFB;&#x52A0;&#x7684;&#x6570;&#x7EC4;&#xFF0C;<code>nums</code>&#x8868;&#x793A;&#x9700;&#x8981;&#x8FDB;&#x884C;<code>combine</code>&#x7684;&#x6570;&#x7EC4;&#xFF0C;<code>array</code>&#x8868;&#x793A;&#x6700;&#x540E;&#x8FD4;&#x56DE;&#x8FDB;&#x884C;<code>push</code>&#x7684;&#x6570;&#x7EC4;&#x3002;</li>
-</ul>
-<pre><code class="lang-js">[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]  --&gt; ([<span class="hljs-number">1</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) --&gt; ([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">3</span>]) --&gt; ([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
-                             --&gt; ([<span class="hljs-number">1</span>, <span class="hljs-number">3</span>])
-</code></pre>
 <h4 id="&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</h4>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> subsets = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums</span>) </span>{
-  <span class="hljs-keyword">var</span> array = [[]];
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> isUgly = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">num</span>) </span>{
+  <span class="hljs-keyword">if</span> (num === <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+  <span class="hljs-keyword">var</span> n
+  <span class="hljs-keyword">while</span> (num !== <span class="hljs-number">1</span>) {
+    n = num / <span class="hljs-number">5</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Math</span>.floor(n) === n) {
+      num = n
+      <span class="hljs-keyword">continue</span>
+    }
 
-  combine([], nums.slice(<span class="hljs-number">0</span>), array);
+    n = num / <span class="hljs-number">3</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Math</span>.floor(n) === n) {
+      num = n
+      <span class="hljs-keyword">continue</span>
+    }
 
-  <span class="hljs-keyword">return</span> array;
-};
+    n = num / <span class="hljs-number">2</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Math</span>.floor(n) === n) {
+      num = n
+      <span class="hljs-keyword">continue</span>
+    }
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">combine</span>(<span class="hljs-params">arr, nums, array</span>) </span>{
-  <span class="hljs-keyword">while</span> (nums.length) {
-    <span class="hljs-keyword">var</span> data = nums[<span class="hljs-number">0</span>];
-    <span class="hljs-keyword">var</span> arr_1 = arr.slice(<span class="hljs-number">0</span>);
-    arr_1.push(data);
-    array.push(arr_1);
-    nums.shift();
-    combine(arr_1, nums.slice(<span class="hljs-number">0</span>), array);
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
   }
-}
+
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+};
 </code></pre>
 
                     
@@ -380,10 +348,8 @@
         </div>
 
         
-        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
+        <a href="../solution/227.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 227. Basic Calculator II"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../solution/88.html" class="navigation navigation-next " aria-label="Next page: 88. Merge Sorted Array"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

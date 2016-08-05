@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>78. Subsets | Leetcode JS Solution (84 / 376)</title>
+        <title>125. Valid Palindrome | Leetcode JS Solution (84 / 376)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../solution/88.html" />
+    <link rel="next" href="../solution/141.html" />
     
     
-    <link rel="prev" href="../index.html" />
+    <link rel="prev" href="../solution/92.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="1"
-        data-chapter-title="78. Subsets"
-        data-filepath="solution/78.md"
+        data-level="4"
+        data-chapter-title="125. Valid Palindrome"
+        data-filepath="solution/125.md"
         data-basepath=".."
         data-revision="Sat Aug 06 2016 01:58:01 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -82,7 +82,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1" data-path="solution/78.html">
+        <li class="chapter " data-level="1" data-path="solution/78.html">
             
                 
                     <a href="../solution/78.html">
@@ -127,7 +127,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4" data-path="solution/125.html">
+        <li class="chapter active" data-level="4" data-path="solution/125.html">
             
                 
                     <a href="../solution/125.html">
@@ -302,73 +302,72 @@
 <li><a href="#&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</a></li>
 </ul>
 <h4 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h4>
-<p>Given a set of distinct integers, nums, return all possible subsets.</p>
-<p>Note: The solution set must not contain duplicate subsets.</p>
-<p>For example, If nums = [1,2,3], a solution is:</p>
-<pre><code class="lang-js">[
-  [<span class="hljs-number">3</span>],
-  [<span class="hljs-number">1</span>],
-  [<span class="hljs-number">2</span>],
-  [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],
-  [<span class="hljs-number">1</span>,<span class="hljs-number">3</span>],
-  [<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],
-  [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],
-  []
-]
-</code></pre>
-<h4 id="&#x5927;&#x81F4;&#x610F;&#x601D;">&#x5927;&#x81F4;&#x610F;&#x601D;</h4>
-<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x628A;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x62C6;&#x5206;&#xFF0C;&#x7ED9;&#x51FA;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x53EF;&#x80FD;&#x6027;&#xFF0C;&#x5E76;&#x4E14;&#x5217;&#x51FA;&#x6765;&#x3002;</p>
+<p>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.</p>
+<p>For example,</p>
+<pre><code>&quot;A man, a plan, a canal: Panama&quot; is a palindrome.
+&quot;race a car&quot; is not a palindrome.
+</code></pre><h4 id="&#x5927;&#x81F4;&#x610F;&#x601D;">&#x5927;&#x81F4;&#x610F;&#x601D;</h4>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5224;&#x5B9A;&#x91CC;&#x9762;&#x7684;&#x6570;&#x5B57;&#x548C;&#x5B57;&#x6BCD;&#x662F;&#x5426;&#x662F;&#x56DE;&#x6587;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x4E0D;&#x7BA1;&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#x7B49;&#x5185;&#x5BB9;</p>
 <h4 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</h4>
-<p>&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#xFF0C;&#x9996;&#x5148;&#x60F3;&#x5230;&#x7684;&#x5C31;&#x662F;&#x5229;&#x7528;&#x9012;&#x5F52;&#x53BB;&#x89E3;&#x51B3;&#x3002;</p>
 <ul>
-<li>&#x9996;&#x5148;&#xFF0C;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5C06;&#x7A7A;&#x6570;&#x7EC4;&#x653E;&#x8FDB;&#x53BB;</li>
+<li>&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x5224;&#x65AD;&#xFF0C;&#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x91CC;&#x6CA1;&#x6709;&#x6570;&#x5B57;&#x548C;&#x5B57;&#x6BCD;&#xFF0C;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;<code>true</code></li>
 </ul>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> array = [[]];
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (!(<span class="hljs-regexp">/[a-z|A-Z|\d]+/g</span>).test(s)) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
 </code></pre>
 <ul>
-<li>&#x7136;&#x540E;&#x8C03;&#x7528;<code>combine</code>&#x51FD;&#x6570;</li>
+<li>&#x5F97;&#x5230;&#x6240;&#x6709;&#x7684;&#x6570;&#x5B57;&#x548C;&#x5B57;&#x6BCD;&#x7684;&#x7EAF;&#x5B57;&#x7B26;&#x4E32;</li>
 </ul>
-<pre><code class="lang-js">combine([], nums.slice(<span class="hljs-number">0</span>), array);
+<pre><code class="lang-js">s = s.match(<span class="hljs-regexp">/[a-z|A-Z|\d]+/g</span>).join(<span class="hljs-string">&apos;&apos;</span>)
 </code></pre>
 <ul>
-<li>&#x5728;<code>combine</code>&#x51FD;&#x6570;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5269;&#x4E0B;&#x7684;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x904D;&#x5386;</li>
+<li>&#x6211;&#x4EEC;&#x627E;&#x5230;&#x4E2D;&#x95F4;&#x957F;&#x5EA6;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x904D;&#x5386;&#x6BD4;&#x5BF9;&#x3002;&#x4E00;&#x4E2A;&#x4ECE;0&#x5F00;&#x59CB;&#xFF0C;&#x4E00;&#x4E2A;&#x4ECE;<code>length - 1</code>&#x5F00;&#x59CB;</li>
 </ul>
-<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">combine</span>(<span class="hljs-params">arr, nums, array</span>) </span>{
-  <span class="hljs-keyword">while</span> (nums.length) {
-    <span class="hljs-keyword">var</span> data = nums[<span class="hljs-number">0</span>];
-    <span class="hljs-keyword">var</span> arr_1 = arr.slice(<span class="hljs-number">0</span>);
-    arr_1.push(data);
-    array.push(arr_1);
-    nums.shift();
-    combine(arr_1, nums.slice(<span class="hljs-number">0</span>), array);
-  }
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> middle = <span class="hljs-built_in">Math</span>.floor(s.length / <span class="hljs-number">2</span>);
+<span class="hljs-keyword">var</span> length = s.length - <span class="hljs-number">1</span>;
+<span class="hljs-keyword">var</span> n = <span class="hljs-number">0</span>;
+
+<span class="hljs-keyword">while</span> (n &lt;= middle) {
+  <span class="hljs-keyword">var</span> left = s[n++];
+  <span class="hljs-keyword">var</span> right = s[length--];
 }
 </code></pre>
 <ul>
-<li>&#x5728;<code>combine</code>&#x51FD;&#x6570;&#x91CC;&#xFF0C;<code>arr</code>&#x91CC;&#x8868;&#x793A;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x6DFB;&#x52A0;&#x7684;&#x6570;&#x7EC4;&#xFF0C;<code>nums</code>&#x8868;&#x793A;&#x9700;&#x8981;&#x8FDB;&#x884C;<code>combine</code>&#x7684;&#x6570;&#x7EC4;&#xFF0C;<code>array</code>&#x8868;&#x793A;&#x6700;&#x540E;&#x8FD4;&#x56DE;&#x8FDB;&#x884C;<code>push</code>&#x7684;&#x6570;&#x7EC4;&#x3002;</li>
+<li>&#x5728;&#x5FAA;&#x73AF;&#x4E2D;&#x8FDB;&#x884C;&#x5224;&#x65AD;<ul>
+<li>&#x5982;&#x679C; left === right &#x76F4;&#x63A5;&#x7EE7;&#x7EED;&#x5FAA;&#x73AF;</li>
+<li>&#x7531;&#x4E8E;a &#x548C; A &#x662F;&#x76F8;&#x7B49;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x901A;&#x8FC7; charCodeAt&#x6765;&#x8FDB;&#x884C;&#x5224;&#x65AD;</li>
+<li>&#x4F46;&#x662F;&#x5982;&#x679C;&#x662F;&#x6570;&#x5B57;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#xFF0C;&#x6240;&#x6709;&#x8FD9;&#x91CC;&#x8FD8;&#x9700;&#x8981;&#x5224;&#x65AD;&#x4E00;&#x4E0B;&#x662F;&#x5426;&#x662F;&#x6570;&#x5B57;&#x7684;&#x60C5;&#x51B5;</li>
 </ul>
-<pre><code class="lang-js">[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]  --&gt; ([<span class="hljs-number">1</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) --&gt; ([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">3</span>]) --&gt; ([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])
-                             --&gt; ([<span class="hljs-number">1</span>, <span class="hljs-number">3</span>])
+</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (left === right) <span class="hljs-keyword">continue</span>;
+<span class="hljs-keyword">var</span> leftCode = left.charCodeAt();
+<span class="hljs-keyword">var</span> rightCode = right.charCodeAt();
+
+<span class="hljs-keyword">if</span> (leftCode &lt; <span class="hljs-number">65</span> || rightCode &lt; <span class="hljs-number">65</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; <span class="hljs-comment">// &#x5982;&#x679C;&#x6709;&#x4E00;&#x65B9;&#x4E0D;&#x662F;&#x6570;&#x5B57;&#xFF0C;&#x8FD4;&#x56DE;false</span>
+<span class="hljs-keyword">if</span> (<span class="hljs-built_in">Math</span>.abs(leftCode - rightCode) !== <span class="hljs-number">32</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
 </code></pre>
 <h4 id="&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</h4>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> subsets = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums</span>) </span>{
-  <span class="hljs-keyword">var</span> array = [[]];
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> isPalindrome = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s</span>) </span>{
+  <span class="hljs-keyword">if</span> (!(<span class="hljs-regexp">/[a-z|A-Z|\d]+/g</span>).test(s)) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+  s = s.match(<span class="hljs-regexp">/[a-z|A-Z|\d]+/g</span>).join(<span class="hljs-string">&apos;&apos;</span>)
+  <span class="hljs-keyword">var</span> middle = <span class="hljs-built_in">Math</span>.floor(s.length / <span class="hljs-number">2</span>);
+  <span class="hljs-keyword">var</span> length = s.length - <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">var</span> n = <span class="hljs-number">0</span>;
 
-  combine([], nums.slice(<span class="hljs-number">0</span>), array);
+  <span class="hljs-keyword">while</span> (n &lt;= middle) {
+    <span class="hljs-keyword">var</span> left = s[n++];
+    <span class="hljs-keyword">var</span> right = s[length--];
 
-  <span class="hljs-keyword">return</span> array;
-};
+    <span class="hljs-keyword">if</span> (left === right) <span class="hljs-keyword">continue</span>;
+    <span class="hljs-keyword">var</span> leftCode = left.charCodeAt();
+    <span class="hljs-keyword">var</span> rightCode = right.charCodeAt();
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">combine</span>(<span class="hljs-params">arr, nums, array</span>) </span>{
-  <span class="hljs-keyword">while</span> (nums.length) {
-    <span class="hljs-keyword">var</span> data = nums[<span class="hljs-number">0</span>];
-    <span class="hljs-keyword">var</span> arr_1 = arr.slice(<span class="hljs-number">0</span>);
-    arr_1.push(data);
-    array.push(arr_1);
-    nums.shift();
-    combine(arr_1, nums.slice(<span class="hljs-number">0</span>), array);
+    <span class="hljs-keyword">if</span> (leftCode &lt; <span class="hljs-number">65</span> || rightCode &lt; <span class="hljs-number">65</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Math</span>.abs(leftCode - rightCode) !== <span class="hljs-number">32</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
   }
-}
+
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+};
 </code></pre>
 
                     
@@ -380,10 +379,10 @@
         </div>
 
         
-        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
+        <a href="../solution/92.html" class="navigation navigation-prev " aria-label="Previous page: 92. Reverse Linked List II"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../solution/88.html" class="navigation navigation-next " aria-label="Next page: 88. Merge Sorted Array"><i class="fa fa-angle-right"></i></a>
+        <a href="../solution/141.html" class="navigation navigation-next " aria-label="Next page: 141. Linked List Cycle"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
