@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>227. Basic Calculator II | Leetcode JS Solution (96 / 380)</title>
+        <title>315. Count of Smaller Numbers After Self | Leetcode JS Solution (96 / 380)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.2">
@@ -37,10 +37,8 @@
         
     
     
-    <link rel="next" href="../solution/263.html" />
     
-    
-    <link rel="prev" href="../solution/223.html" />
+    <link rel="prev" href="../solution/263.html" />
     
 
         
@@ -49,9 +47,9 @@
         
         
     <div class="book"
-        data-level="11"
-        data-chapter-title="227. Basic Calculator II"
-        data-filepath="solution/227.md"
+        data-level="13"
+        data-chapter-title="315. Count of Smaller Numbers After Self"
+        data-filepath="solution/315.md"
         data-basepath=".."
         data-revision="Sun Aug 07 2016 19:45:39 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -232,7 +230,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="11" data-path="solution/227.html">
+        <li class="chapter " data-level="11" data-path="solution/227.html">
             
                 
                     <a href="../solution/227.html">
@@ -262,7 +260,7 @@
             
         </li>
     
-        <li class="chapter " data-level="13" data-path="solution/315.html">
+        <li class="chapter active" data-level="13" data-path="solution/315.html">
             
                 
                     <a href="../solution/315.html">
@@ -317,103 +315,67 @@
 <li><a href="#&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</a></li>
 </ul>
 <h4 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h4>
-<p>Implement a basic calculator to evaluate a simple expression string.</p>
-<p>The expression string contains only non-negative integers, <code>+, -, *, /</code> operators and empty spaces . The integer division should truncate toward zero.</p>
-<p>You may assume that the given expression is always valid.</p>
-<pre><code class="lang-js">Some examples:
-<span class="hljs-string">&quot;3+2*2&quot;</span> = <span class="hljs-number">7</span>
-<span class="hljs-string">&quot; 3/2 &quot;</span> = <span class="hljs-number">1</span>
-<span class="hljs-string">&quot; 3+5 / 2 &quot;</span> = <span class="hljs-number">5</span>
-</code></pre>
-<h4 id="&#x5927;&#x81F4;&#x610F;&#x601D;">&#x5927;&#x81F4;&#x610F;&#x601D;</h4>
-<p>&#x7ED9;&#x4F60;&#x4E00;&#x6BB5;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4EC5;&#x5305;&#x542B; &#x975E;&#x8D1F;&#x6570;&#x3001;&#x52A0;&#x51CF;&#x4E58;&#x9664;&#x7B26;&#x53F7;&#x548C;&#x7A7A;&#x683C;&#x3002;&#x6C42;&#x51FA;&#x6700;&#x540E;&#x7684;&#x8FD0;&#x7B97;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
-<h4 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</h4>
-<ul>
-<li>&#x5206;&#x4E3A;&#x4E24;&#x6B65;&#xFF0C;&#x5148;&#x7B97;&#x4E58;&#x9664;&#xFF0C;&#x540E;&#x7B97;&#x52A0;&#x51CF;</li>
-<li>&#x4E58;&#x9664;&#x7B97;&#x6CD5;<ul>
-<li>&#x5FAA;&#x73AF;&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x5339;&#x914D;&#xFF0C;&#x6328;&#x4E2A;&#x628A;&#x4E58;&#x9664;&#x7ED3;&#x679C;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;<code>replace</code>&#x66FF;&#x6362;&#x3002;</li>
-<li>&#x8FD9;&#x6837;&#x5C31;&#x4F1A;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x53EA;&#x6709;&#x6570;&#x5B57;&#x548C;&#x52A0;&#x51CF;&#x7B26;&#x53F7;&#x7684;&#x8868;&#x8FBE;&#x5F0F;</li>
-</ul>
-</li>
-</ul>
-<pre><code class="lang-js">s = s.replace(<span class="hljs-regexp">/\s/g</span>, <span class="hljs-string">&apos;&apos;</span>); <span class="hljs-comment">// &#x53BB;&#x9664;&#x7A7A;&#x683C;</span>
-<span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/(\d+)(\/|\*)(\d+)/</span>;
-<span class="hljs-keyword">var</span> result = s.match(reg);
-<span class="hljs-keyword">while</span> (result) {
-  pattern = result[<span class="hljs-number">2</span>];
-  leftDigtial = <span class="hljs-built_in">Number</span>(result[<span class="hljs-number">1</span>]);
-  rightDigtial = <span class="hljs-built_in">Number</span>(result[<span class="hljs-number">3</span>]);
-  <span class="hljs-keyword">if</span> (pattern === <span class="hljs-string">&apos;*&apos;</span>) {
-    res = leftDigtial * rightDigtial;
-  } <span class="hljs-keyword">else</span> {
-    res = <span class="hljs-built_in">Math</span>.floor(leftDigtial / rightDigtial);
-  }
-  s = s.replace(result[<span class="hljs-number">0</span>], res);
-  result.lastIndex = <span class="hljs-number">0</span>;
-  result = s.match(reg);
-}
-</code></pre>
-<ul>
-<li>&#x52A0;&#x51CF;&#x8FD0;&#x7B97;<ul>
-<li>&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x5339;&#x914D;&#xFF0C;&#x53D6;&#x51FA;&#x6240;&#x6709;&#x7684;&#x6570;&#x5B57;&#x4EE5;&#x53CA;&#x52A0;&#x51CF;&#x7B26;&#x53F7;&#x3002;</li>
-<li>&#x8BA9;&#x548C;&#x5148;&#x7B49;&#x4E8E;&#x6570;&#x5B57;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;</li>
-<li>&#x4F9D;&#x6B21;&#x904D;&#x5386;&#x52A0;&#x51CF;&#x7B26;&#x53F7;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x6328;&#x4E2A;&#x8FDB;&#x884C;&#x52A0;&#x51CF;&#x8FD0;&#x7B97;</li>
-</ul>
-</li>
-</ul>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> digitalArray = s.match(<span class="hljs-regexp">/\d+/g</span>); <span class="hljs-comment">// &#x6570;&#x5B57;</span>
-<span class="hljs-keyword">var</span> patternArray = s.match(<span class="hljs-regexp">/[\-|\+]/g</span>); <span class="hljs-comment">// &#x52A0;&#x51CF;&#x7B26;&#x53F7;</span>
-<span class="hljs-keyword">var</span> count = <span class="hljs-built_in">Number</span>(digitalArray[<span class="hljs-number">0</span>]);
-<span class="hljs-keyword">if</span> (!patternArray) <span class="hljs-keyword">return</span> count; <span class="hljs-comment">// &#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x7B26;&#x53F7;&#xFF0C;&#x76F4;&#x63A5;return</span>
+<p>You are given an integer array nums and you have to return a new counts array. The counts array has the property where counts[i] is the number of smaller elements to the right of nums[i].</p>
+<p>Example:</p>
+<pre><code>Given nums = [5, 2, 6, 1]
 
-patternArray.forEach((pattern, i) =&gt; {
-  leftDigtial = <span class="hljs-built_in">Number</span>(digitalArray[i + <span class="hljs-number">1</span>]);
-  <span class="hljs-keyword">if</span> (pattern === <span class="hljs-string">&apos;+&apos;</span>) {
-    count += leftDigtial
-  } <span class="hljs-keyword">else</span> {
-    count -= leftDigtial;
-  }
-});
-</code></pre>
+To the right of 5 there are 2 smaller elements (2 and 1).
+To the right of 2 there is only 1 smaller element (1).
+To the right of 6 there is 1 smaller element (1).
+To the right of 1 there is 0 smaller element.
+Return the array [2, 1, 1, 0].
+</code></pre><h4 id="&#x5927;&#x81F4;&#x610F;&#x601D;">&#x5927;&#x81F4;&#x610F;&#x601D;</h4>
+<ul>
+<li>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5224;&#x65AD;&#x6BCF;&#x4E2A;&#x6570;&#x5B57;&#x7684;&#x53F3;&#x8FB9;&#x6709;&#x51E0;&#x4E2A;&#x6BD4;&#x5B83;&#x5C0F;&#x7684;&#x6570;&#x5B57;&#x3002;</li>
+</ul>
+<pre><code>nums = [5, 2, 6, 1]
+
+5&#x7684;&#x53F3;&#x8FB9;&#x6709; (2 &#x548C; 1).
+2&#x7684;&#x53F3;&#x8FB9;&#x6709; (1).
+6&#x7684;&#x53F3;&#x8FB9;&#x6709; (1).
+1&#x7684;&#x53F3;&#x8FB9;&#x6CA1;&#x6709;.
+&#x6240;&#x4EE5;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x7EC4;&#x662F; array [2, 1, 1, 0].
+</code></pre><h4 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</h4>
+<ul>
+<li>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4ECE;&#x540E;&#x5F80;&#x524D;&#x904D;&#x5386;&#xFF0C;&#x7136;&#x540E;&#x4F9D;&#x6B21;&#x628A;&#x6570;&#x7EC4;&#x63D2;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x4E8C;&#x5206;&#x6CD5;&#x53BB;&#x67E5;&#x627E;&#x65B0;&#x7684;&#x6570;&#x5E94;&#x8BE5;&#x5728;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x6839;&#x636E;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#x6765;&#x5224;&#x65AD;&#x5E94;&#x8BE5;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x5C0F;&#x4E8E;&#x5B83;&#x7684;&#x6570;&#x5B57;</li>
+</ul>
 <h4 id="&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</h4>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> calculate = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">s</span>) </span>{
-  <span class="hljs-keyword">var</span> leftDigtial;
-  <span class="hljs-keyword">var</span> rightDigtial;
-  <span class="hljs-keyword">var</span> pattern;
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> countSmaller = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums</span>) </span>{
+  <span class="hljs-keyword">var</span> array = [];
+  <span class="hljs-keyword">var</span> arr = [];
+  <span class="hljs-keyword">var</span> length = nums.length;
+  <span class="hljs-keyword">var</span> index = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = length - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+    <span class="hljs-keyword">var</span> d = nums[i];
+    index = binarySearch(arr, d);
+    inserIndex = index;
 
-  s = s.replace(<span class="hljs-regexp">/\s/g</span>, <span class="hljs-string">&apos;&apos;</span>); <span class="hljs-comment">// &#x53BB;&#x9664;&#x7A7A;&#x683C;</span>
-  <span class="hljs-keyword">var</span> reg = <span class="hljs-regexp">/(\d+)(\/|\*)(\d+)/</span>;
-  <span class="hljs-keyword">var</span> result = s.match(reg);
-  <span class="hljs-keyword">while</span> (result) {
-    pattern = result[<span class="hljs-number">2</span>];
-    leftDigtial = <span class="hljs-built_in">Number</span>(result[<span class="hljs-number">1</span>]);
-    rightDigtial = <span class="hljs-built_in">Number</span>(result[<span class="hljs-number">3</span>]);
-    <span class="hljs-keyword">if</span> (pattern === <span class="hljs-string">&apos;*&apos;</span>) {
-      res = leftDigtial * rightDigtial;
-    } <span class="hljs-keyword">else</span> {
-      res = <span class="hljs-built_in">Math</span>.floor(leftDigtial / rightDigtial);
+    <span class="hljs-keyword">while</span> (arr[inserIndex] === d) {
+      inserIndex--;
     }
-    s = s.replace(result[<span class="hljs-number">0</span>], res);
-    result.lastIndex = <span class="hljs-number">0</span>;
-    result = s.match(reg);
+    <span class="hljs-keyword">if</span> (index !== inserIndex) inserIndex++;
+    arr.splice(index, <span class="hljs-number">0</span>, d);
+    array.unshift(inserIndex);
   }
-
-  <span class="hljs-keyword">var</span> digitalArray = s.match(<span class="hljs-regexp">/\d+/g</span>); <span class="hljs-comment">// &#x6570;&#x5B57;</span>
-  <span class="hljs-keyword">var</span> patternArray = s.match(<span class="hljs-regexp">/[\-|\+]/g</span>); <span class="hljs-comment">// &#x52A0;&#x51CF;&#x7B26;&#x53F7;</span>
-  <span class="hljs-keyword">var</span> count = <span class="hljs-built_in">Number</span>(digitalArray[<span class="hljs-number">0</span>]);
-  <span class="hljs-keyword">if</span> (!patternArray) <span class="hljs-keyword">return</span> count; <span class="hljs-comment">// &#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x7B26;&#x53F7;&#xFF0C;&#x76F4;&#x63A5;return</span>
-
-  patternArray.forEach((pattern, i) =&gt; {
-    leftDigtial = <span class="hljs-built_in">Number</span>(digitalArray[i + <span class="hljs-number">1</span>]);
-    <span class="hljs-keyword">if</span> (pattern === <span class="hljs-string">&apos;+&apos;</span>) {
-      count += leftDigtial
-    } <span class="hljs-keyword">else</span> {
-      count -= leftDigtial;
-    }
-  });
-
-  <span class="hljs-keyword">return</span> count;
+  <span class="hljs-keyword">return</span> array;
 };
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">binarySearch</span>(<span class="hljs-params">arr, val</span>) </span>{
+  <span class="hljs-keyword">var</span> high = arr.length - <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">var</span> mid = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">var</span> low = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">while</span> (low &lt;= high) {
+    mid = <span class="hljs-built_in">Math</span>.floor((low + high) / <span class="hljs-number">2</span>);
+    <span class="hljs-keyword">if</span> (arr[mid] === val) {
+      <span class="hljs-keyword">return</span> mid;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr[mid] &gt; val) {
+      high = mid - <span class="hljs-number">1</span>;
+    } <span class="hljs-keyword">else</span> {
+      low = mid + <span class="hljs-number">1</span>;
+    }
+  }
+  <span class="hljs-keyword">return</span> low;
+}
 </code></pre>
 
                     
@@ -425,10 +387,8 @@ patternArray.forEach((pattern, i) =&gt; {
         </div>
 
         
-        <a href="../solution/223.html" class="navigation navigation-prev " aria-label="Previous page: 223. Rectangle Area"><i class="fa fa-angle-left"></i></a>
+        <a href="../solution/263.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 263. Ugly Number"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../solution/263.html" class="navigation navigation-next " aria-label="Next page: 263. Ugly Number"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
