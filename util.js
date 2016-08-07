@@ -31,6 +31,7 @@ const U = {
   binarySearch(arr, val) {
     var high = arr.length - 1;
     var mid = 0;
+    var low = 0;
     while (low <= high) {
       mid = Math.floor((low + high) / 2);
       if (arr[mid] === val) {
@@ -41,7 +42,8 @@ const U = {
         low = mid + 1;
       }
     }
-    return -1;
+
+    return low;
   },
   converBinary(n) {
     var index = 0;

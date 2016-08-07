@@ -13,3 +13,4 @@ Summary
 -	[223. Rectangle Area](solution/223.md)
 -	[227. Basic Calculator II](solution/227.md)
 -	[263. Ugly Number](solution/263.md)
+-	[315. Count of Smaller Numbers After Self](solution/315.md)

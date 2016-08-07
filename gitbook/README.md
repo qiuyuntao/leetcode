@@ -1,2 +1,2 @@
-Leetcode JS Solution (84 / 376)
+Leetcode JS Solution (96 / 380)
 ===============================
