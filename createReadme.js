@@ -20,6 +20,14 @@ fs.readdir(path, (err, files) => {
     ':-------------------------------------------:',
     '-------------------------------------------:'
   ]];
+
+  files.sort((a, b) => {
+    var c = Number(/\d+/.exec(a)[0]);
+    var d = Number(/\d+/.exec(b)[0]);
+
+    return c - d;
+  });
+
   files.map((d) => {
     var number = /\d+/.exec(d)[0];
     var name = d.replace('.js', '');
