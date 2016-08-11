@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>141. Linked List Cycle | Leetcode JS Solution (96 / 380)</title>
+        <title>111. Minimum Depth of Binary Tree | Leetcode JS Solution (96 / 380)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../solution/142.html" />
+    <link rel="next" href="../solution/118.html" />
     
     
-    <link rel="prev" href="../solution/125.html" />
+    <link rel="prev" href="../solution/107.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="9"
-        data-chapter-title="141. Linked List Cycle"
-        data-filepath="solution/141.md"
+        data-level="6"
+        data-chapter-title="111. Minimum Depth of Binary Tree"
+        data-filepath="solution/111.md"
         data-basepath=".."
         data-revision="Thu Aug 11 2016 16:12:03 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -157,7 +157,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6" data-path="solution/111.html">
+        <li class="chapter active" data-level="6" data-path="solution/111.html">
             
                 
                     <a href="../solution/111.html">
@@ -202,7 +202,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="9" data-path="solution/141.html">
+        <li class="chapter " data-level="9" data-path="solution/141.html">
             
                 
                     <a href="../solution/141.html">
@@ -407,31 +407,33 @@
 <li><a href="#&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</a></li>
 </ul>
 <h4 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h4>
-<p>Given a linked list, determine if it has a cycle in it.</p>
-<p>Follow up: Can you solve it without using extra space?</p>
+<p>Given a binary tree, find its minimum depth.</p>
+<p>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>
 <h4 id="&#x5927;&#x81F4;&#x610F;&#x601D;">&#x5927;&#x81F4;&#x610F;&#x601D;</h4>
-<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x5224;&#x65AD;&#x662F;&#x5426;&#x91CC;&#x9762;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5706;&#x73AF;</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x67E5;&#x627E;&#x4ED6;&#x5B58;&#x5728;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;</p>
 <h4 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</h4>
 <ul>
-<li>&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x6307;&#x9488;slow,fast&#x3002;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x90FD;&#x4ECE;&#x8868;&#x5934;&#x5F00;&#x59CB;&#x8D70;&#xFF0C;slow&#x6BCF;&#x6B21;&#x8D70;&#x4E00;&#x6B65;&#xFF0C;fast&#x6BCF;&#x6B21;&#x8D70;&#x4E24;&#x6B65;&#xFF0C;&#x5982;&#x679C;fast&#x9047;&#x5230;null&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x6CA1;&#x6709;&#x73AF;&#xFF0C;&#x8FD4;&#x56DE;false&#xFF1B;&#x5982;&#x679C;slow == fast&#xFF0C;&#x8BF4;&#x660E;&#x6709;&#x73AF;&#xFF0C;&#x5E76;&#x4E14;&#x6B64;&#x65F6;fast&#x8D85;&#x4E86;slow&#x4E00;&#x5708;&#xFF0C;&#x8FD4;&#x56DE;true&#x3002;</li>
-<li>&#x4E3A;&#x4EC0;&#x4E48;&#x6709;&#x73AF;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4E8C;&#x8005;&#x4E00;&#x5B9A;&#x4F1A;&#x76F8;&#x9047;&#x5462;&#xFF1F;&#x56E0;&#x4E3A;fast&#x5148;&#x8FDB;&#x5165;&#x73AF;&#xFF0C;&#x5728;slow&#x8FDB;&#x5165;&#x4E4B;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x628A;slow&#x770B;&#x4F5C;&#x5728;&#x524D;&#x9762;&#xFF0C;fast&#x5728;&#x540E;&#x9762;&#x6BCF;&#x6B21;&#x5FAA;&#x73AF;&#x90FD;&#x5411;slow&#x9760;&#x8FD1;1&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x5B9A;&#x4F1A;&#x76F8;&#x9047;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;fast&#x76F4;&#x63A5;&#x8DF3;&#x8FC7;slow&#x7684;&#x60C5;&#x51B5;&#x3002;</li>
+<li>&#x8FDB;&#x884C;&#x904D;&#x5386;&#xFF0C;&#x6BCF;&#x6B21;&#x904D;&#x5386;&#xFF0C;<code>level + 1</code>&#xFF0C;&#x76F4;&#x5230;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#x548C;&#x53F3;&#x5B50;&#x6811;&#x90FD;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8BB0;&#x5F55;&#x8FD9;&#x4E2A;&#x70B9;&#x7684;level</li>
+<li>&#x518D;&#x6839;&#x636E;<code>min</code>&#x8FDB;&#x884C;&#x5224;&#x65AD;&#xFF0C;&#x5982;&#x679C;<code>min &gt; level</code>&#xFF0C;&#x5219;&#x8FDB;&#x884C;&#x66FF;&#x6362;</li>
 </ul>
 <h4 id="&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</h4>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> hasCycle = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">head</span>) </span>{
-  head = U.getList(head);
-  <span class="hljs-keyword">var</span> slow = head;
-  <span class="hljs-keyword">var</span> fast = head;
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> minDepth = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">root</span>) </span>{
+   <span class="hljs-keyword">if</span> (!root) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+   <span class="hljs-keyword">var</span> min = <span class="hljs-number">999999999</span>;
+   search(root, <span class="hljs-number">1</span>);
 
-  <span class="hljs-keyword">while</span> (fast &amp;&amp; fast.next) {
-    slow = slow.next;
-    fast = fast.next.next;
-    <span class="hljs-keyword">if</span> (slow === fast) {
-      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
-    }
-  }
+   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">search</span>(<span class="hljs-params">root, level</span>) </span>{
+     <span class="hljs-keyword">if</span> (root) {
+       <span class="hljs-keyword">if</span> (!root.left &amp;&amp; !root.right) {
+         <span class="hljs-keyword">if</span> (min &gt; level) min = level;
+       }
+       search(root.left, level + <span class="hljs-number">1</span>);
+       search(root.right, level + <span class="hljs-number">1</span>);
+     }
+   }
 
-  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
-};
+   <span class="hljs-keyword">return</span> min;
+ };
 </code></pre>
 
                     
@@ -443,10 +445,10 @@
         </div>
 
         
-        <a href="../solution/125.html" class="navigation navigation-prev " aria-label="Previous page: 125. Valid Palindrome"><i class="fa fa-angle-left"></i></a>
+        <a href="../solution/107.html" class="navigation navigation-prev " aria-label="Previous page: 107. Binary Tree Level Order Traversal II"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../solution/142.html" class="navigation navigation-next " aria-label="Next page: 142. Linked List Cycle II"><i class="fa fa-angle-right"></i></a>
+        <a href="../solution/118.html" class="navigation navigation-next " aria-label="Next page: 118. Pascal&#39;s Triangle"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
