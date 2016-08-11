@@ -3,24 +3,20 @@
  * @return {number[][]}
  */
 var permute = function(nums) {
-  var permuteArray = [];
+  var array = [];
+  var length = nums.length;
+  var counts = 1;
 
-  search(nums, []);
-  function search(nums, arr) {
-    if (!nums.length) permuteArray.push(arr);
-    for (var i = 0; i < nums.length; i++) {
-      var data = nums[i];
-      var array = nums.slice(0);
-      var a = arr.slice(0);
-      a.push(data);
-      array.splice(i, 1);
-      search(array, a);
-    }
+  while (length > 0) {
+    counts = counts * length--;
   }
 
-  return permuteArray;
+  for (var i = 0; i < counts; i++) {
+    var arr = [];
+
+  }
 };
 
-var nums = [1,2,3];
+var nums = [1, 2, 3, 4];
 
 console.log(permute(nums));
