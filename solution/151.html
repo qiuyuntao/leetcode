@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>190. Reverse Bits | Leetcode JS Solution (96 / 380)</title>
+        <title>151. Reverse Words in a String | Leetcode JS Solution (96 / 380)</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../solution/199.html" />
+    <link rel="next" href="../solution/160.html" />
     
     
-    <link rel="prev" href="../solution/160.html" />
+    <link rel="prev" href="../solution/142.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="13"
-        data-chapter-title="190. Reverse Bits"
-        data-filepath="solution/190.md"
+        data-level="11"
+        data-chapter-title="151. Reverse Words in a String"
+        data-filepath="solution/151.md"
         data-basepath=".."
         data-revision="Sun Aug 14 2016 21:00:36 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -232,7 +232,7 @@
             
         </li>
     
-        <li class="chapter " data-level="11" data-path="solution/151.html">
+        <li class="chapter active" data-level="11" data-path="solution/151.html">
             
                 
                     <a href="../solution/151.html">
@@ -262,7 +262,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="13" data-path="solution/190.html">
+        <li class="chapter " data-level="13" data-path="solution/190.html">
             
                 
                     <a href="../solution/190.html">
@@ -422,40 +422,81 @@
 <li><a href="#&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</a></li>
 </ul>
 <h4 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h4>
-<p>Reverse bits of a given 32 bits unsigned integer.</p>
-<p>For example, given input 43261596 (represented in binary as 00000010100101000001111010011100), return 964176192 (represented in binary as 00111001011110000010100101000000).</p>
-<p>Follow up:
-If this function is called many times, how would you optimize it?</p>
-<p>Related problem: Reverse Integer</p>
-<h4 id="&#x5927;&#x81F4;&#x610F;&#x601D;">&#x5927;&#x81F4;&#x610F;&#x601D;</h4>
-<p>&#x53CD;&#x8F6C;&#x4E00;&#x4E2A;&#x6B63;&#x6574;&#x6570;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x4F4D;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x53CD;&#x8F6C;&#x540E;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;&#x5F97;&#x51FA;&#x76F8;&#x5E94;&#x5341;&#x8FDB;&#x5236;&#x7684;&#x6570;&#x5B57;</p>
-<p>&#x4F8B;&#x5982;</p>
-<p>  43261596 <strong><em>&#x4E8C;&#x8FDB;&#x5236;&#x4E3A;</em></strong> 00000010100101000001111010011100 <strong><em>&#x53CD;&#x8F6C;&#x540E;&#x4E3A;</em></strong> 00111001011110000010100101000000 <strong><em>&#x6839;&#x636E;&#x4E8C;&#x8FDB;&#x5236;&#x8F6C;&#x6362;&#x4E3A;&#x5341;&#x8FDB;&#x5236;</em></strong> 964176192</p>
+<p>Given an input string, reverse the string word by word.</p>
+<pre><code>For example,
+Given s = &quot;the sky is blue&quot;,
+return &quot;blue is sky the&quot;.
+</code></pre><h4 id="&#x5927;&#x81F4;&#x610F;&#x601D;">&#x5927;&#x81F4;&#x610F;&#x601D;</h4>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x628A;&#x91CC;&#x9762;&#x7684;&#x5355;&#x8BCD;&#xFF0C;&#x5012;&#x5E8F;&#x8F93;&#x51FA;&#x51FA;&#x6765;&#x3002;</p>
 <h4 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x89E3;&#x51B3;&#x65B9;&#x6848;</h4>
-<p>&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x548C;&#x4E0A;&#x8FF0;&#x6D41;&#x7A0B;&#x4E00;&#x81F4;</p>
-<p>&#x9996;&#x5148;&#xFF0C;&#x6839;&#x636E;&#x5341;&#x8FDB;&#x5236;&#x5F97;&#x5230;&#x4E8C;&#x8FDB;&#x5236;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> s = <span class="hljs-string">&apos;&apos;</span>; <span class="hljs-comment">// &#x4E8C;&#x8FDB;&#x5236;&#x8868;&#x793A;</span>
-<span class="hljs-keyword">var</span> count = <span class="hljs-number">0</span>;
-<span class="hljs-keyword">var</span> index = <span class="hljs-number">31</span>;
-<span class="hljs-keyword">while</span> (n &gt; <span class="hljs-number">0</span>) {
-  s = (n % <span class="hljs-number">2</span>) + s;
-  index--;
-  n = <span class="hljs-built_in">Math</span>.floor(n / <span class="hljs-number">2</span>);
+<ul>
+<li>&#x4F9D;&#x6B21;&#x904D;&#x5386;&#x6574;&#x4E2A;string</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> reverseWords = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">str</span>) </span>{
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i <span class="hljs-keyword">in</span> str) {
+    <span class="hljs-keyword">var</span> s = str[i];
+  }
+};
+</code></pre>
+<ul>
+<li>&#x9047;&#x5230;&#x7A7A;&#x683C;<ul>
+<li>&#x5982;&#x679C;string&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x628A;word &#x8D4B;&#x7ED9; string&#x3002;&#x8FD9;&#x79CD;&#x662F;&#x521A;&#x5F00;&#x59CB;&#x7684;&#x60C5;&#x51B5;</li>
+<li>&#x5982;&#x679C;string&#x5B58;&#x5728;&#xFF0C;&#x5E76;&#x4E14;word&#x4E0D;&#x7B49;&#x4E8E;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x628A;word&#x548C;string&#x4EE5;&#x7A7A;&#x683C;&#x8FDB;&#x884C;&#x62FC;&#x63A5;</li>
+<li>&#x6700;&#x540E;&#x5C06;word&#x8D4B;&#x503C;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (s === <span class="hljs-string">&apos; &apos;</span>) {
+  <span class="hljs-keyword">if</span> (!string.length) {
+    string = word;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (word.length) {
+    string = word + s + string;
+  }
+  word = <span class="hljs-string">&apos;&apos;</span>;
 }
 </code></pre>
-<p>&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x662F;&#x8981;&#x7FFB;&#x8F6C;&#xFF0C;&#x5728;&#x5F97;&#x5230;<code>n</code>&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x91C7;&#x7528;&#x7684;&#x662F;<code>s = (n % 2) + s;</code>&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x6211;&#x4EEC;<code>s += (n % 2);</code>&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x76F4;&#x63A5;&#x5F97;&#x5230;&#x4E86;&#x7FFB;&#x8F6C;&#x540E;&#x7684;&#x4E8C;&#x8FDB;&#x5236;</p>
-<p>&#x5E76;&#x4E14;&#x6211;&#x4EEC;&#x6700;&#x540E;&#x662F;&#x8981;&#x8F6C;&#x6362;&#x4E3A;&#x5341;&#x8FDB;&#x5236;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x8FDB;&#x884C;&#x7FFB;&#x8F6C;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5341;&#x8FDB;&#x5236;&#x7684;&#x8BA1;&#x7B97;&#x3002;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x4E0D;&#x662F;&#x7A7A;&#x683C;&#xFF0C;&#x8FDB;&#x884C;&#x5B57;&#x7B26;&#x7684;&#x62FC;&#x63A5;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (s === <span class="hljs-string">&apos; &apos;</span>) {
+  ...
+} <span class="hljs-keyword">else</span> {
+  word += s;
+}
+</code></pre>
+<ul>
+<li>&#x6700;&#x540E;&#x8F93;&#x51FA;&#x7684;&#x65F6;&#x5019;<ul>
+<li>&#x5982;&#x679C;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x662F;<code>a</code>&#x7684;&#x60C5;&#x51B5;&#xFF0C;<code>string</code>&#x4E0D;&#x5B58;&#x5728;&#xFF0C;<code>word = a</code>&#xFF0C;&#x6240;&#x4EE5;&#x76F4;&#x63A5;<code>return word</code></li>
+<li><code>a b</code>&#xFF0C;&#x90A3;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;<code>word</code>&#x5B58;&#x5728;&#xFF0C;<code>string</code>&#x4E5F;&#x5B58;&#x5728;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x6700;&#x540E;&#x7684;&#x5FAA;&#x73AF;&#x7684;&#x65F6;&#x5019;&#x662F;&#x6CA1;&#x6709;&#x8FDB;&#x884C;&#x62FC;&#x63A5;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x624B;&#x52A8;&#x518D;&#x62FC;&#x63A5;&#x4E00;&#x6B21;</li>
+<li><code>a</code>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x7684;&#x8BDD;&#xFF0C;&#x76F4;&#x63A5;<code>return string</code></li>
+</ul>
+</li>
+</ul>
 <h4 id="&#x6E90;&#x4EE3;&#x7801;">&#x6E90;&#x4EE3;&#x7801;</h4>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> reverseBits = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">n</span>) </span>{
-  <span class="hljs-keyword">var</span> s = <span class="hljs-string">&apos;&apos;</span>;
-  <span class="hljs-keyword">var</span> count = <span class="hljs-number">0</span>;
-  <span class="hljs-keyword">var</span> index = <span class="hljs-number">31</span>;
-  <span class="hljs-keyword">while</span> (n &gt; <span class="hljs-number">0</span>) {
-    <span class="hljs-keyword">if</span> (n % <span class="hljs-number">2</span> !== <span class="hljs-number">0</span>) count += <span class="hljs-built_in">Math</span>.pow(<span class="hljs-number">2</span>, index);
-    index--;
-    n = <span class="hljs-built_in">Math</span>.floor(n / <span class="hljs-number">2</span>);
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> reverseWords = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">str</span>) </span>{
+  <span class="hljs-keyword">var</span> string = <span class="hljs-string">&apos;&apos;</span>;
+  <span class="hljs-keyword">var</span> word = <span class="hljs-string">&apos;&apos;</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i <span class="hljs-keyword">in</span> str) {
+    <span class="hljs-keyword">var</span> s = str[i];
+    <span class="hljs-keyword">if</span> (s === <span class="hljs-string">&apos; &apos;</span>) {
+      <span class="hljs-keyword">if</span> (!string.length) {
+        string = word;
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (word.length) {
+        string = word + s + string;
+      }
+      word = <span class="hljs-string">&apos;&apos;</span>;
+    } <span class="hljs-keyword">else</span> {
+      word += s;
+    }
   }
-  <span class="hljs-keyword">return</span> count;
+
+  <span class="hljs-keyword">if</span> (!string.length) {
+    <span class="hljs-keyword">return</span> word;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (string.length &amp;&amp; word.length) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${word}</span> <span class="hljs-subst">${string}</span>`</span>
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (string.length &amp;&amp; !word.length) {
+    <span class="hljs-keyword">return</span> string;
+  }
 };
 </code></pre>
 
@@ -468,10 +509,10 @@ If this function is called many times, how would you optimize it?</p>
         </div>
 
         
-        <a href="../solution/160.html" class="navigation navigation-prev " aria-label="Previous page: 160. Intersection of Two Linked Lists"><i class="fa fa-angle-left"></i></a>
+        <a href="../solution/142.html" class="navigation navigation-prev " aria-label="Previous page: 142. Linked List Cycle II"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../solution/199.html" class="navigation navigation-next " aria-label="Next page: 199. Binary Tree Right Side View"><i class="fa fa-angle-right"></i></a>
+        <a href="../solution/160.html" class="navigation navigation-next " aria-label="Next page: 160. Intersection of Two Linked Lists"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
