@@ -12,6 +12,7 @@ Summary
 -	[125. Valid Palindrome](solution/125.md)
 -	[141. Linked List Cycle](solution/141.md)
 -	[142. Linked List Cycle II](solution/142.md)
+-	[151. Reverse Words in a String](solution/151.md)
 -	[160. Intersection of Two Linked Lists](solution/160.md)
 -	[190. Reverse Bits](solution/190.md)
 -	[199. Binary Tree Right Side View](solution/199.md)
