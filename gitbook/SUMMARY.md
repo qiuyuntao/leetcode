@@ -7,6 +7,7 @@ Summary
 -	[102. Binary Tree Level Order Traversal](solution/102.md)
 -	[107. Binary Tree Level Order Traversal II](solution/107.md)
 -	[111. Minimum Depth of Binary Tree](solution/111.md)
+-	[112. Path Sum](solution/112.md)
 -	[118. Pascal's Triangle](solution/118.md)
 -	[119. Pascal's Triangle II](solution/118.md)
 -	[125. Valid Palindrome](solution/125.md)

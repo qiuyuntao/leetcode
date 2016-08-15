@@ -49,6 +49,7 @@ You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 |[104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/104.html)|[click me](./js/104. Maximum Depth of Binary Tree.js)|
 |[107. Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/107.html)|[click me](./js/107. Binary Tree Level Order Traversal II.js)|
 |[111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/111.html)|[click me](./js/111. Minimum Depth of Binary Tree.js)|
+|[112. Path Sum](https://leetcode.com/problems/path-sum/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/112.html)|[click me](./js/112. Path Sum.js)|
 |[114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/114.html)|[click me](./js/114. Flatten Binary Tree to Linked List.js)|
 |[118. Pascal's Triangle](https://leetcode.com/problems/pascal's-triangle/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/118.html)|[click me](./js/118. Pascal's Triangle.js)|
 |[119. Pascal's Triangle II](https://leetcode.com/problems/pascal's-triangle-ii/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/119.html)|[click me](./js/119. Pascal's Triangle II.js)|
@@ -73,8 +74,8 @@ You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 |[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/215.html)|[click me](./js/215. Kth Largest Element in an Array.js)|
 |[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/217.html)|[click me](./js/217. Contains Duplicate.js)|
 |[222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/222.html)|[click me](./js/222. Count Complete Tree Nodes.js)|
-|[223. Rectangle Area.htm](https://leetcode.com/problems/rectangle-area.htm/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/223.html)|[click me](./js/223. Rectangle Area.htm.js)|
 |[223. Rectangle Area](https://leetcode.com/problems/rectangle-area/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/223.html)|[click me](./js/223. Rectangle Area.js)|
+|[223. Rectangle Area.htm](https://leetcode.com/problems/rectangle-area.htm/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/223.html)|[click me](./js/223. Rectangle Area.htm.js)|
 |[224. Basic Calculator](https://leetcode.com/problems/basic-calculator/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/224.html)|[click me](./js/224. Basic Calculator.js)|
 |[225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/225.html)|[click me](./js/225. Implement Stack using Queues.js)|
 |[226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/226.html)|[click me](./js/226. Invert Binary Tree.js)|
@@ -83,6 +84,7 @@ You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 |[229. Majority Element II](https://leetcode.com/problems/majority-element-ii/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/229.html)|[click me](./js/229. Majority Element II.js)|
 |[230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/230.html)|[click me](./js/230. Kth Smallest Element in a BST.js)|
 |[231. Power of Two](https://leetcode.com/problems/power-of-two/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/231.html)|[click me](./js/231. Power of Two.js)|
+|[234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/234.html)|[click me](./js/234. Palindrome Linked List.js)|
 |[237. Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/237.html)|[click me](./js/237. Delete Node in a Linked List.js)|
 |[238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/238.html)|[click me](./js/238. Product of Array Except Self.js)|
 |[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/242.html)|[click me](./js/242. Valid Anagram.js)|
