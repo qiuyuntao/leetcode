@@ -75,9 +75,10 @@ You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 |[206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/206.html)|[click me](./js/206. Reverse Linked List.js)|
 |[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/215.html)|[click me](./js/215. Kth Largest Element in an Array.js)|
 |[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/217.html)|[click me](./js/217. Contains Duplicate.js)|
+|[219. Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/219.html)|[click me](./js/219. Contains Duplicate II.js)|
 |[222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/222.html)|[click me](./js/222. Count Complete Tree Nodes.js)|
-|[223. Rectangle Area](https://leetcode.com/problems/rectangle-area/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/223.html)|[click me](./js/223. Rectangle Area.js)|
 |[223. Rectangle Area.htm](https://leetcode.com/problems/rectangle-area.htm/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/223.html)|[click me](./js/223. Rectangle Area.htm.js)|
+|[223. Rectangle Area](https://leetcode.com/problems/rectangle-area/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/223.html)|[click me](./js/223. Rectangle Area.js)|
 |[224. Basic Calculator](https://leetcode.com/problems/basic-calculator/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/224.html)|[click me](./js/224. Basic Calculator.js)|
 |[225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/225.html)|[click me](./js/225. Implement Stack using Queues.js)|
 |[226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/226.html)|[click me](./js/226. Invert Binary Tree.js)|
@@ -91,7 +92,7 @@ You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 |[238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/238.html)|[click me](./js/238. Product of Array Except Self.js)|
 |[242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/242.html)|[click me](./js/242. Valid Anagram.js)|
 |[257. Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/257.html)|[click me](./js/257. Binary Tree Paths.js)|
-|[258](https://leetcode.com/problems/258/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/258.html)|[click me](./js/258.js)|
+|[258. Add Digits](https://leetcode.com/problems/add-digits/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/258.html)|[click me](./js/258. Add Digits.js)|
 |[263. Ugly Number](https://leetcode.com/problems/ugly-number/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/263.html)|[click me](./js/263. Ugly Number.js)|
 |[268](https://leetcode.com/problems/268/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/268.html)|[click me](./js/268.js)|
 |[283](https://leetcode.com/problems/283/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/283.html)|[click me](./js/283.js)|
