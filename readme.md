@@ -50,10 +50,12 @@ You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 |[107. Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/107.html)|[click me](./js/107. Binary Tree Level Order Traversal II.js)|
 |[111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/111.html)|[click me](./js/111. Minimum Depth of Binary Tree.js)|
 |[112. Path Sum](https://leetcode.com/problems/path-sum/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/112.html)|[click me](./js/112. Path Sum.js)|
+|[113. Path Sum II](https://leetcode.com/problems/path-sum-ii/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/113.html)|[click me](./js/113. Path Sum II.js)|
 |[114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/114.html)|[click me](./js/114. Flatten Binary Tree to Linked List.js)|
 |[118. Pascal's Triangle](https://leetcode.com/problems/pascal's-triangle/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/118.html)|[click me](./js/118. Pascal's Triangle.js)|
 |[119. Pascal's Triangle II](https://leetcode.com/problems/pascal's-triangle-ii/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/119.html)|[click me](./js/119. Pascal's Triangle II.js)|
 |[125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/125.html)|[click me](./js/125. Valid Palindrome.js)|
+|[129. Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/129.html)|[click me](./js/129. Sum Root to Leaf Numbers.js)|
 |[137. Single Number II](https://leetcode.com/problems/single-number-ii/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/137.html)|[click me](./js/137. Single Number II.js)|
 |[141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/141.html)|[click me](./js/141. Linked List Cycle.js)|
 |[142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/142.html)|[click me](./js/142. Linked List Cycle II.js)|
