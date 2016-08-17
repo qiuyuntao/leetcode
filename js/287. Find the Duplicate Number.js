@@ -11,6 +11,8 @@ var findDuplicate = function(nums) {
     obj[d]++;
     if (obj[d] > 1) a = d;
   });
+
+  return a;
 };
 
 var nums = [1, 1];

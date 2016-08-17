@@ -36,6 +36,7 @@ You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 |[65. Valid Number](https://leetcode.com/problems/valid-number/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/65.html)|[click me](./js/65. Valid Number.js)|
 |[67. Add Binary](https://leetcode.com/problems/add-binary/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/67.html)|[click me](./js/67. Add Binary.js)|
 |[70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/70.html)|[click me](./js/70. Climbing Stairs.js)|
+|[71. Simplify Path](https://leetcode.com/problems/simplify-path/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/71.html)|[click me](./js/71. Simplify Path.js)|
 |[78. Subsets](https://leetcode.com/problems/subsets/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/78.html)|[click me](./js/78. Subsets.js)|
 |[80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/80.html)|[click me](./js/80. Remove Duplicates from Sorted Array II.js)|
 |[82. Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/82.html)|[click me](./js/82. Remove Duplicates from Sorted List II.js)|
@@ -77,8 +78,8 @@ You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 |[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/217.html)|[click me](./js/217. Contains Duplicate.js)|
 |[219. Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/219.html)|[click me](./js/219. Contains Duplicate II.js)|
 |[222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/222.html)|[click me](./js/222. Count Complete Tree Nodes.js)|
-|[223. Rectangle Area.htm](https://leetcode.com/problems/rectangle-area.htm/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/223.html)|[click me](./js/223. Rectangle Area.htm.js)|
 |[223. Rectangle Area](https://leetcode.com/problems/rectangle-area/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/223.html)|[click me](./js/223. Rectangle Area.js)|
+|[223. Rectangle Area.htm](https://leetcode.com/problems/rectangle-area.htm/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/223.html)|[click me](./js/223. Rectangle Area.htm.js)|
 |[224. Basic Calculator](https://leetcode.com/problems/basic-calculator/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/224.html)|[click me](./js/224. Basic Calculator.js)|
 |[225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/225.html)|[click me](./js/225. Implement Stack using Queues.js)|
 |[226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/226.html)|[click me](./js/226. Invert Binary Tree.js)|
@@ -94,29 +95,27 @@ You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 |[257. Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/257.html)|[click me](./js/257. Binary Tree Paths.js)|
 |[258. Add Digits](https://leetcode.com/problems/add-digits/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/258.html)|[click me](./js/258. Add Digits.js)|
 |[263. Ugly Number](https://leetcode.com/problems/ugly-number/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/263.html)|[click me](./js/263. Ugly Number.js)|
-|[268](https://leetcode.com/problems/268/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/268.html)|[click me](./js/268.js)|
-|[283](https://leetcode.com/problems/283/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/283.html)|[click me](./js/283.js)|
-|[287](https://leetcode.com/problems/287/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/287.html)|[click me](./js/287.js)|
-|[290](https://leetcode.com/problems/290/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/290.html)|[click me](./js/290.js)|
-|[292](https://leetcode.com/problems/292/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/292.html)|[click me](./js/292.js)|
+|[268. Missing Number](https://leetcode.com/problems/missing-number/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/268.html)|[click me](./js/268. Missing Number.js)|
+|[283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/283.html)|[click me](./js/283. Move Zeroes.js)|
+|[287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/287.html)|[click me](./js/287. Find the Duplicate Number.js)|
+|[290. Word Pattern](https://leetcode.com/problems/word-pattern/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/290.html)|[click me](./js/290. Word Pattern.js)|
+|[292. Nim Game](https://leetcode.com/problems/nim-game/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/292.html)|[click me](./js/292. Nim Game.js)|
 |[303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query---immutable/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/303.html)|[click me](./js/303. Range Sum Query - Immutable.js)|
 |[304. Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d---immutable/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/304.html)|[click me](./js/304. Range Sum Query 2D - Immutable.js)|
 |[312. Burst Balloons](https://leetcode.com/problems/burst-balloons/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/312.html)|[click me](./js/312. Burst Balloons.js)|
 |[315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/315.html)|[click me](./js/315. Count of Smaller Numbers After Self.js)|
-|[318](https://leetcode.com/problems/318/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/318.html)|[click me](./js/318.js)|
-|[319](https://leetcode.com/problems/319/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/319.html)|[click me](./js/319.js)|
-|[322](https://leetcode.com/problems/322/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/322.html)|[click me](./js/322.js)|
-|[324](https://leetcode.com/problems/324/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/324.html)|[click me](./js/324.js)|
-|[326](https://leetcode.com/problems/326/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/326.html)|[click me](./js/326.js)|
-|[328](https://leetcode.com/problems/328/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/328.html)|[click me](./js/328.js)|
-|[334](https://leetcode.com/problems/334/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/334.html)|[click me](./js/334.js)|
-|[338](https://leetcode.com/problems/338/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/338.html)|[click me](./js/338.js)|
-|[342](https://leetcode.com/problems/342/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/342.html)|[click me](./js/342.js)|
-|[343](https://leetcode.com/problems/343/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/343.html)|[click me](./js/343.js)|
+|[318. Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/318.html)|[click me](./js/318. Maximum Product of Word Lengths.js)|
+|[319. Bulb Switcher](https://leetcode.com/problems/bulb-switcher/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/319.html)|[click me](./js/319. Bulb Switcher.js)|
+|[326. Power of Three](https://leetcode.com/problems/power-of-three/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/326.html)|[click me](./js/326. Power of Three.js)|
+|[328. Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/328.html)|[click me](./js/328. Odd Even Linked List.js)|
+|[338. Counting Bits](https://leetcode.com/problems/counting-bits/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/338.html)|[click me](./js/338. Counting Bits.js)|
+|[342. Power of Four](https://leetcode.com/problems/power-of-four/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/342.html)|[click me](./js/342. Power of Four.js)|
+|[343. Integer Break](https://leetcode.com/problems/integer-break/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/343.html)|[click me](./js/343. Integer Break.js)|
+|[344. Reverse String](https://leetcode.com/problems/reverse-string/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/344.html)|[click me](./js/344. Reverse String.js)|
 |[345. Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/345.html)|[click me](./js/345. Reverse Vowels of a String.js)|
-|[347](https://leetcode.com/problems/347/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/347.html)|[click me](./js/347.js)|
-|[349](https://leetcode.com/problems/349/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/349.html)|[click me](./js/349.js)|
-|[350](https://leetcode.com/problems/350/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/350.html)|[click me](./js/350.js)|
+|[347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/347.html)|[click me](./js/347. Top K Frequent Elements.js)|
+|[349. Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/349.html)|[click me](./js/349. Intersection of Two Arrays.js)|
+|[350. Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/350.html)|[click me](./js/350. Intersection of Two Arrays II.js)|
 |[357. Count Numbers with Unique Digits](https://leetcode.com/problems/count-numbers-with-unique-digits/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/357.html)|[click me](./js/357. Count Numbers with Unique Digits.js)|
 |[367. Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/367.html)|[click me](./js/367. Valid Perfect Square.js)|
 |[373. Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)|[visit explaination](http://qiuyuntao.github.io/leetcode/solution/373.html)|[click me](./js/373. Find K Pairs with Smallest Sums.js)|

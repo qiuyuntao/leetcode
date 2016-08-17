@@ -1,3 +1,8 @@
+/**
+ * link: https://leetcode.com/problems/move-zeroes/
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
 var moveZeroes = function(nums) {
   var count = 0;
   var arr = [];

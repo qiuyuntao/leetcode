@@ -1,12 +1,9 @@
 /**
+ * link: https://leetcode.com/problems/intersection-of-two-arrays/
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number[]}
  */
-
-var nums1 = [1, 2, 2, 1];
-var nums2 = [2, 2];
-
 var intersection = function(nums1, nums2) {
   if (nums1.length === 0 || nums2.length === 0) return [];
   nums1 = removeSame(nums1);
