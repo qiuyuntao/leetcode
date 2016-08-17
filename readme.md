@@ -1,10 +1,10 @@
-#### This is leetcode solution with js. 114 / 386
+#### This is leetcode solution with js.
 
-  I have done some explaination for some leetcode problems.
+I have done some explaination for some leetcode problems.
 
-  You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
+You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 
-  |problems|explaination|source|
+|problems|explaination|source|
 |-------------------------------------------|:-------------------------------------------:|-------------------------------------------:|
 |[1. Two Sum](https://leetcode.com/problems/two-sum/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/1.html)|[view source](./js/1. Two Sum.js)|
 |[2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/2.html)|[view source](./js/2. Add Two Numbers.js)|

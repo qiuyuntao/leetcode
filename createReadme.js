@@ -2,14 +2,15 @@ const fs = require('fs');
 const exec = require('child_process').exec;
 const path = process.cwd() + '/js';
 
+var title = `#### This is leetcode solution with js.
+
+I have done some explaination for some leetcode problems.
+
+You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
+
+`;
+
 fs.readdir(path, (err, files) => {
-  var title = `#### This is leetcode solution with js. ${files.length} / 386
-
-  I have done some explaination for some leetcode problems.
-
-  You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
-
-  `;
   var array = [[
     'problems',
     'explaination',
