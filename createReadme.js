@@ -2,15 +2,14 @@ const fs = require('fs');
 const exec = require('child_process').exec;
 const path = process.cwd() + '/js';
 
-var title = `#### This is leetcode solution with js.
-
-I have explaination for some leetcode problems.
-
-You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
-
-`;
-
 fs.readdir(path, (err, files) => {
+  var title = `#### This is leetcode solution with js. ${files.length} / 386
+
+  I have done some explaination for some leetcode problems.
+
+  You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
+
+  `;
   var array = [[
     'problems',
     'explaination',
@@ -37,8 +36,8 @@ fs.readdir(path, (err, files) => {
     url = url.join('-');
     array.push([
       `[${name}](https://leetcode.com/problems/${url}/)`,
-      `[visit explaination](http://qiuyuntao.github.io/leetcode/solution/${number}.html)`,
-      `[click me](./js/${name}.js)`
+      `[view explaination](http://qiuyuntao.github.io/leetcode/solution/${number}.html)`,
+      `[view source](./js/${name}.js)`
     ]);
 
     var arr = array.map((data) => {
