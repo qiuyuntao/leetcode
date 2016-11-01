@@ -30,9 +30,9 @@ You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 |[34. Search for a Range](https://leetcode.com/problems/search-for-a-range/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/34.html)|[view source](./js/34. Search for a Range.js)|
 |[35. Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/35.html)|[view source](./js/35. Search Insert Position.js)|
 |[46. Permutations](https://leetcode.com/problems/permutations/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/46.html)|[view source](./js/46. Permutations.js)|
+|[49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/49.html)|[view source](./js/49. Group Anagrams.js)|
 |[58. Length of Last Word](https://leetcode.com/problems/length-of-last-word/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/58.html)|[view source](./js/58. Length of Last Word.js)|
 |[61. Rotate List](https://leetcode.com/problems/rotate-list/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/61.html)|[view source](./js/61. Rotate List.js)|
-|[62. Unique Paths](https://leetcode.com/problems/unique-paths/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/62.html)|[view source](./js/62. Unique Paths.js)|
 |[65. Valid Number](https://leetcode.com/problems/valid-number/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/65.html)|[view source](./js/65. Valid Number.js)|
 |[67. Add Binary](https://leetcode.com/problems/add-binary/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/67.html)|[view source](./js/67. Add Binary.js)|
 |[70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/70.html)|[view source](./js/70. Climbing Stairs.js)|
@@ -41,6 +41,7 @@ You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 |[80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/80.html)|[view source](./js/80. Remove Duplicates from Sorted Array II.js)|
 |[82. Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/82.html)|[view source](./js/82. Remove Duplicates from Sorted List II.js)|
 |[83. Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/83.html)|[view source](./js/83. Remove Duplicates from Sorted List.js)|
+|[86. Partition List](https://leetcode.com/problems/partition-list/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/86.html)|[view source](./js/86. Partition List.js)|
 |[88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/88.html)|[view source](./js/88. Merge Sorted Array.js)|
 |[90. Subsets II](https://leetcode.com/problems/subsets-ii/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/90.html)|[view source](./js/90. Subsets II.js)|
 |[92. Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/92.html)|[view source](./js/92. Reverse Linked List II.js)|
@@ -78,8 +79,8 @@ You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 |[217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/217.html)|[view source](./js/217. Contains Duplicate.js)|
 |[219. Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/219.html)|[view source](./js/219. Contains Duplicate II.js)|
 |[222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/222.html)|[view source](./js/222. Count Complete Tree Nodes.js)|
-|[223. Rectangle Area](https://leetcode.com/problems/rectangle-area/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/223.html)|[view source](./js/223. Rectangle Area.js)|
 |[223. Rectangle Area.htm](https://leetcode.com/problems/rectangle-area.htm/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/223.html)|[view source](./js/223. Rectangle Area.htm.js)|
+|[223. Rectangle Area](https://leetcode.com/problems/rectangle-area/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/223.html)|[view source](./js/223. Rectangle Area.js)|
 |[224. Basic Calculator](https://leetcode.com/problems/basic-calculator/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/224.html)|[view source](./js/224. Basic Calculator.js)|
 |[225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/225.html)|[view source](./js/225. Implement Stack using Queues.js)|
 |[226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/226.html)|[view source](./js/226. Invert Binary Tree.js)|
@@ -88,6 +89,7 @@ You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 |[229. Majority Element II](https://leetcode.com/problems/majority-element-ii/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/229.html)|[view source](./js/229. Majority Element II.js)|
 |[230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/230.html)|[view source](./js/230. Kth Smallest Element in a BST.js)|
 |[231. Power of Two](https://leetcode.com/problems/power-of-two/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/231.html)|[view source](./js/231. Power of Two.js)|
+|[232. Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/232.html)|[view source](./js/232. Implement Queue using Stacks.js)|
 |[234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/234.html)|[view source](./js/234. Palindrome Linked List.js)|
 |[237. Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/237.html)|[view source](./js/237. Delete Node in a Linked List.js)|
 |[238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/238.html)|[view source](./js/238. Product of Array Except Self.js)|
@@ -120,3 +122,4 @@ You can visit https://qiuyuntao.github.io/leetcode to see these explainations.
 |[367. Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/367.html)|[view source](./js/367. Valid Perfect Square.js)|
 |[373. Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/373.html)|[view source](./js/373. Find K Pairs with Smallest Sums.js)|
 |[378. Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/378.html)|[view source](./js/378. Kth Smallest Element in a Sorted Matrix.js)|
+|[412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)|[view explaination](http://qiuyuntao.github.io/leetcode/solution/412.html)|[view source](./js/412. Fizz Buzz.js)|
