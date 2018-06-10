@@ -4,16 +4,6 @@
  * @param {number} target
  * @return {number[]}
  */
-// var twoSum = function(nums, target) {
-//   var count = 0;
-//   for (var i = 0; i < nums.length; i++) {
-//     for (var j = i + 1; j < nums.length; j++) {
-//       count = nums[i] + nums[j];
-//       if (count === target) return [i, j];
-//     }
-//   }
-// };
-
 var twoSum = function(nums, target) {
   var count = 0;
   var obj = {};
